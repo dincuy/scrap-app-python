@@ -55,15 +55,8 @@ def scrap_from_url(source_urls, product):
                     kode = row.select_one("td:nth-child(1)").text.strip()
                     produk = row.select_one("td:nth-child(2)").text.strip()
                     desc = row.select_one("td:nth-child(2) b").get("data-title", "").replace("\n", " ").strip() or "tidak ada deskripsi"
-                    harga = row.select_one("td:nth-child(3)").text.strip()
-
-                    # # Penanganan konversi harga
-                    # if harga == "Rp 0":
-                    #     harga = 0
-                    # # else:
-                    # #     harga = 0  # Set default jika harga kosong
-                        
-                    harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(harga, 2000)
+                    harga = row.select_one("td:nth-child(3)").text.strip()  
+                    harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(harga)
                     order = row.select_one("td:nth-child(4)").text.strip()
 
                     # Cek duplikasi berdasarkan kode

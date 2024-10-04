@@ -17,9 +17,9 @@ headers = {
     "Authorization": f"Bearer {SANITY_TOKEN}",
 }
 
-def get_all_paket_ids():
-    """Mendapatkan semua _id dari dokumen tipe 'paket' di Sanity"""
-    query = '*[_type == "paket"]{_id}'
+def get_all_paket_ids(kategori):
+    """Mendapatkan semua _id dari dokumen tipe 'paket' di Sanity berdasarkan kategori"""
+    query = f'*[_type == "paket" && kategori == "{kategori}"]{{_id}}'
     try:
         response = requests.get(sanity_url_query, headers=headers, params={"query": query})
         if response.status_code == 200:
@@ -54,15 +54,16 @@ def delete_paket_documents(ids):
     except Exception as e:
         print(f"Error saat mengirim permintaan penghapusan: {e}")
 
-def hapus_semua_data_paket():
-    """Fungsi utama untuk menghapus semua dokumen 'paket'"""
-    print("Mengambil semua _id dari dokumen 'paket'...")
-    ids = get_all_paket_ids()
+def hapus_data_paket_by_kategori(kategori):
+    """Fungsi utama untuk menghapus dokumen 'paket' berdasarkan kategori"""
+    print(f"Mengambil semua _id dari dokumen 'paket' dengan kategori '{kategori}'...")
+    ids = get_all_paket_ids(kategori)
     if ids:
         print(f"Ditemukan {len(ids)} dokumen. Menghapus...")
         delete_paket_documents(ids)
     else:
-        print("Tidak ada dokumen 'paket' yang ditemukan.")
+        print(f"Tidak ada dokumen 'paket' ditemukan untuk kategori '{kategori}'.")
 
-# Panggil fungsi untuk menghapus semua data 'paket'
-hapus_semua_data_paket()
+# Panggil fungsi untuk menghapus semua data 'paket' berdasarkan kategori yang diinginkan
+kategori_yang_dihapus = input("Masukkan kategori yang ingin dihapus (paket internet/voucher internet/pulsa): ")
+hapus_data_paket_by_kategori(kategori_yang_dihapus)
