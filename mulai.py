@@ -3,8 +3,166 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import time
-from konversi import konversi_harga, get_total_harga_pulsa
-from source_urls import source_urls
+# from konversi import konversi_harga, get_total_harga_pulsa
+# from source_urls import source_urls
+
+def konversi_harga(nominal):
+    # Konversi nominal menjadi integer
+    nominal_int = int(''.join(filter(str.isdigit, nominal)))
+
+    # Tentukan keuntungan berdasarkan nominal
+    profit = 2000 if nominal_int < 50000 else 3000
+
+    # Hitung total harga dengan keuntungan
+    new_total_harga = nominal_int + profit
+
+    # Dapatkan ribuan dan ratusan
+    ribuan = (new_total_harga // 1000) * 1000
+    ratusan = new_total_harga % 1000
+
+    # Bulatkan sesuai aturan yang diberikan
+    bulatkan = ribuan + 1000 if ratusan >= 500 else ribuan
+
+    # Format ke dalam Rupiah dengan format yang diinginkan
+    return "Rp. {:,}".format(bulatkan).replace(",", ".")
+
+
+def get_total_harga_pulsa(str_nominal):
+    if str_nominal == "Pulsa - Cek Hutang Pulsa / Paket Darurat":
+        return "Rp. 0"
+    num = int(''.join(filter(str.isdigit, str_nominal)))
+
+    if "Pulsa Transfer" in str_nominal:
+        num_total_harga = num + 1000
+        return "Rp. {:,}".format(num_total_harga).replace(",", ".")
+
+    if num < 5000:
+        num_total_harga = num + 1000
+    elif num >= 10000 and num < 50000:
+        num_total_harga = num + 2000
+    else:
+        num_total_harga = num + 3000
+
+    return "Rp. {:,}".format(num_total_harga).replace(",", ".")
+
+# Contoh penggunaan
+# print(konversi_harga("Rp. 5000", 2000))
+# print(get_total_harga_pulsa("Pulsa 3000"))
+
+paket_internet_urls = [
+    {
+        "provider": "axis",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional",
+            "https://isipulsa.web.id/harga/paket-internet/axis-masa-aktif-1-bulan",
+        ],
+    },
+    {
+        "provider": "indosat",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-internet/indosat-11",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-new-freedom",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-plus",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-mini",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan",
+        ],
+    },
+    {
+        "provider": "telkomsel",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-10",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-lokal-jabotabek-dan-jawa-barat",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-malam",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-sesuai-zona",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-m-kios",
+        ],
+    },
+    {
+        "provider": "three",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-internet/three-23",
+            "https://isipulsa.web.id/harga/paket-internet/three-happy",
+            "https://isipulsa.web.id/harga/paket-internet/three-kuota-mini",
+            "https://isipulsa.web.id/harga/paket-internet/three-data-bulanan",
+            "https://isipulsa.web.id/harga/paket-internet/three-tanpa-pembagian",
+            "https://isipulsa.web.id/harga/paket-internet/three-kuota-jumbo",
+        ],
+    },
+    {
+        "provider": "xl",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-hemat-bulanan",
+        ],
+    },
+]
+
+voucher_internet_urls = [
+    {
+        "provider": "axis",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/axis-aigo",
+            "https://isipulsa.web.id/harga/voucher-internet/axis-mini-kuota-379",
+            "https://isipulsa.web.id/harga/voucher-internet/axis-bonus-kuota-jawa",
+        ],
+    },
+    {
+        "provider": "indosat",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/indosat-freedom-u",
+            "https://isipulsa.web.id/harga/voucher-internet/indosat-old-freedom-324",
+            "https://isipulsa.web.id/harga/voucher-internet/indosat-freedom-mini-harian",
+        ],
+    },
+    {
+        "provider": "telkomsel",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/telkomsel-khusus-daerah-jawa-barat",
+        ],
+    },
+    {
+        "provider": "three",
+        "urls": ["https://isipulsa.web.id/harga/voucher-internet/three-always-on"],
+    },
+    {
+        "provider": "xl",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/xl-xtra-combo-flex-508",
+        ],
+    },
+]
+
+pulsa_urls = [
+    {
+        "provider": "axis",
+        "urls": ["https://isipulsa.web.id/harga/pulsa/axis-5"],
+    },
+    {
+        "provider": "indosat",
+        "urls": ["https://isipulsa.web.id/harga/pulsa/indosat-2"],
+    },
+    {
+        "provider": "telkomsel",
+        "urls": ["https://isipulsa.web.id/harga/pulsa/telkomsel-1"],
+    },
+    {
+        "provider": "three",
+        "urls": ["https://isipulsa.web.id/harga/pulsa/three-4"],
+    },
+    {
+        "provider": "xl",
+        "urls": ["https://isipulsa.web.id/harga/pulsa/xl-3"],
+    },
+]
+
+source_urls = {
+    "pulsa": pulsa_urls,
+    "paket-internet": paket_internet_urls,
+    "voucher-internet": voucher_internet_urls,
+}
 
 # Konfigurasi API Sanity
 SANITY_PROJECT_ID = "bkraz3f2"  # Ganti dengan Project ID Anda
