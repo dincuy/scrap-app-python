@@ -24,17 +24,19 @@ def konversi_harga(nominal):
     bulatkan = ribuan + 1000 if ratusan >= 500 else ribuan
 
     # Format ke dalam Rupiah dengan format yang diinginkan
-    return "Rp. {:,}".format(bulatkan).replace(",", ".")
+    # return "Rp. {:,}".format(bulatkan).replace(",", ".")
+    return bulatkan
 
 
 def get_total_harga_pulsa(str_nominal):
     if str_nominal == "Pulsa - Cek Hutang Pulsa / Paket Darurat":
-        return "Rp. 0"
+        return 0
     num = int(''.join(filter(str.isdigit, str_nominal)))
 
     if "Pulsa Transfer" in str_nominal:
         num_total_harga = num + 1000
-        return "Rp. {:,}".format(num_total_harga).replace(",", ".")
+        # return "Rp. {:,}".format(num_total_harga).replace(",", ".")
+        return num_total_harga
 
     if num < 5000:
         num_total_harga = num + 1000
@@ -43,7 +45,8 @@ def get_total_harga_pulsa(str_nominal):
     else:
         num_total_harga = num + 3000
 
-    return "Rp. {:,}".format(num_total_harga).replace(",", ".")
+    # return "Rp. {:,}".format(num_total_harga).replace(",", ".")
+    return num_total_harga
 
 # Contoh penggunaan
 # print(konversi_harga("Rp. 5000", 2000))
@@ -272,7 +275,7 @@ def scrap_from_url(source_urls, product):
                     else:
                         collected_ids.add(kode)
 
-                    if harga_jual == "Rp. 0":
+                    if harga_jual == 0:
                         continue
                     
                     # Membuat data untuk dikirim ke Sanity
