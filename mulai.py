@@ -6,15 +6,16 @@ import time
 # from konversi import konversi_harga, get_total_harga_pulsa
 # from source_urls import source_urls
 
-def konversi_harga(nominal):
-    # Konversi nominal menjadi integer
+def hapus_rp(nominal):
     nominal_int = int(''.join(filter(str.isdigit, nominal)))
+    return nominal_int
 
+def konversi_harga(nominal):
     # Tentukan keuntungan berdasarkan nominal
-    profit = 2000 if nominal_int < 50000 else 3000
+    profit = 2000 if nominal < 50000 else 3000
 
     # Hitung total harga dengan keuntungan
-    new_total_harga = nominal_int + profit
+    new_total_harga = nominal + profit
 
     # Dapatkan ribuan dan ratusan
     ribuan = (new_total_harga // 1000) * 1000
@@ -265,7 +266,8 @@ def scrap_from_url(source_urls, product):
                     kode = row.select_one("td:nth-child(1)").text.strip()
                     produk = row.select_one("td:nth-child(2)").text.strip()
                     desc = row.select_one("td:nth-child(2) b").get("data-title", "").replace("\n", " ").strip() or "tidak ada deskripsi"
-                    harga = row.select_one("td:nth-child(3)").text.strip()  
+                    strHaga = row.select_one("td:nth-child(3)").text.strip()
+                    harga = hapus_rp(strHaga)
                     harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(harga)
                     order = row.select_one("td:nth-child(4)").text.strip()
 
