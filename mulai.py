@@ -109,8 +109,7 @@ voucher_internet_urls = [
         "provider": "axis",
         "urls": [
             "https://isipulsa.web.id/harga/voucher-internet/axis-aigo",
-            "https://isipulsa.web.id/harga/voucher-internet/axis-mini-kuota-379",
-            "https://isipulsa.web.id/harga/voucher-internet/axis-bonus-kuota-jawa",
+            "https://isipulsa.web.id/harga/voucher-internet/axis-nasional",
         ],
     },
     {
@@ -248,6 +247,7 @@ def scrap_from_url(source_urls, product):
 
     total_urls = sum(len(source["urls"]) for source in sources)
     processed_urls = 0
+    listAktif = ["TDJBM1", "TDJBM2", "SDJB3G3", "SDJB3G5", "VJABAR153", "VJABAR255", "VJBR33", "VJBR35", "VJABAR357", "VAX1H1", "IV1"]
 
     for source in sources:
         provider = source["provider"]
@@ -291,6 +291,7 @@ def scrap_from_url(source_urls, product):
                         "harga": harga,
                         "hargaJual": harga_jual,
                         "order": order,
+                        "aktif": True if kode in listAktif else False,
                         "dibuatPada": current_time  # Menggunakan format ISO-8601
                     })
             except Exception as e:
