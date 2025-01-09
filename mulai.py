@@ -247,7 +247,26 @@ def scrap_from_url(source_urls, product):
 
     total_urls = sum(len(source["urls"]) for source in sources)
     processed_urls = 0
-    listAktif = ["TDJBM1", "TDJBM2", "SDJB3G3", "SDJB3G5", "VJABAR153", "VJABAR255", "VJBR33", "VJBR35", "VJABAR357", "VAX1H1", "IV1"]
+    listAktif = [
+        "TDJBM1",
+        "TDJBM2",
+        "SDJB3G3",
+        "SDJB3G5",
+        "VJABAR153",
+        "VJABAR255",
+        "VJBR33",
+        "VJBR35",
+        "VJABAR357",
+        "VAX1H1",
+        "IV1",
+        "VAXM1H3",
+        "VAX1SH3",
+        "VABMI3",
+        "VAX2SH7",
+        "MGM1GB1",
+        "MGB1",
+        "MGX1"
+    ]
 
     for source in sources:
         provider = source["provider"]
