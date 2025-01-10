@@ -10,7 +10,7 @@ def hapus_rp(nominal):
     nominal_int = int(''.join(filter(str.isdigit, nominal)))
     return nominal_int
 
-def konversi_harga(nominal):
+def konversi_harga(kode, nominal):
     # Tentukan keuntungan berdasarkan nominal
     profit = 2000 if nominal < 50000 else 3000
 
@@ -26,6 +26,13 @@ def konversi_harga(nominal):
 
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
+    match kode:
+        case "TDJBM1" | "VJABAR153":
+            bulatkan = 10000
+        case "VJABAR255" | "TDJBM2" | "SDJB3G3":
+            bulatkan = 15000
+        case "VJBR35" | "SDJB3G5":
+            bulatkan = 16000
     return bulatkan
 
 
@@ -287,7 +294,7 @@ def scrap_from_url(source_urls, product):
                     desc = row.select_one("td:nth-child(2) b").get("data-title", "").replace("\n", " ").strip() or "tidak ada deskripsi"
                     strHaga = row.select_one("td:nth-child(3)").text.strip()
                     harga = hapus_rp(strHaga)
-                    harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(harga)
+                    harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(kode, harga)
                     order = row.select_one("td:nth-child(4)").text.strip()
 
                     # Cek duplikasi berdasarkan kode
