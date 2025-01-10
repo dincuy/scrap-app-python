@@ -272,7 +272,8 @@ def scrap_from_url(source_urls, product):
         "VAX2SH7",
         "MGM1GB1",
         "MGB1",
-        "MGX1"
+        "MGX1",
+        "TDJBM6"
     ]
 
     for source in sources:
