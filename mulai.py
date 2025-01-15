@@ -65,48 +65,56 @@ paket_internet_urls = [
         "provider": "axis",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional",
-            "https://isipulsa.web.id/harga/paket-internet/axis-masa-aktif-1-bulan",
+            "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional?page=2",
+            # "https://isipulsa.web.id/harga/paket-internet/axis-masa-aktif-1-bulan",
+            "https://isipulsa.web.id/harga/paket-internet/axis-bonus-lokal-jawa"
         ],
     },
     {
         "provider": "indosat",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/indosat-11",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-new-freedom",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-plus",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-mini",
             "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-yellow",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-max"
         ],
     },
     {
         "provider": "telkomsel",
         "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-10",
+            # paket kuota
+            "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jawa-barat",
+            # paket internet
             "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-lokal-jabotabek-dan-jawa-barat",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-malam",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-sesuai-zona",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-m-kios",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=3",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash-full",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash-full?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash-full?page=3"
         ],
     },
     {
         "provider": "three",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/three-23",
-            "https://isipulsa.web.id/harga/paket-internet/three-happy",
             "https://isipulsa.web.id/harga/paket-internet/three-kuota-mini",
+            "https://isipulsa.web.id/harga/paket-internet/three-happy",
+            "https://isipulsa.web.id/harga/paket-internet/three-happy?page=2",
             "https://isipulsa.web.id/harga/paket-internet/three-data-bulanan",
-            "https://isipulsa.web.id/harga/paket-internet/three-tanpa-pembagian",
-            "https://isipulsa.web.id/harga/paket-internet/three-kuota-jumbo",
         ],
     },
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-hemat-bulanan",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=3",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=4",
+            "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-jumbo",
+            "https://isipulsa.web.id/harga/paket-internet/xl-paket-harian-592"
         ],
     },
 ]
@@ -255,10 +263,7 @@ def scrap_from_url(source_urls, product):
     total_urls = sum(len(source["urls"]) for source in sources)
     processed_urls = 0
     listAktif = [
-        "TDJBM1",
-        "TDJBM2",
-        "SDJB3G3",
-        "SDJB3G5",
+        "TDSL2",
         "VJABAR153",
         "VJABAR255",
         "VJBR33",
@@ -297,10 +302,12 @@ def scrap_from_url(source_urls, product):
                     harga = hapus_rp(strHaga)
                     harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(kode, harga)
                     order = row.select_one("td:nth-child(4)").text.strip()
+                    aktif = True if kode in listAktif else False
 
                     # Cek duplikasi berdasarkan kode
                     if kode in collected_ids:
                         duplicates.append(kode)
+                        print(f"kode: {kode}\n dan link nya {url}")
                     else:
                         collected_ids.add(kode)
 
@@ -318,7 +325,7 @@ def scrap_from_url(source_urls, product):
                         "harga": harga,
                         "hargaJual": harga_jual,
                         "order": order,
-                        "aktif": True if kode in listAktif else False,
+                        "aktif": aktif,
                         "dibuatPada": current_time  # Menggunakan format ISO-8601
                     })
             except Exception as e:
@@ -344,7 +351,7 @@ def scrap_from_url(source_urls, product):
             "mutations": [
                 {
                     "createOrReplace": {
-                        "_id": f"paket-{item['kode']}",
+                        # "_id": f"paket-{item['kode']}",
                         "_type": "paket",
                         **item
                     }
@@ -356,6 +363,8 @@ def scrap_from_url(source_urls, product):
             response = requests.post(sanity_url_mutate, headers=headers, data=json.dumps(mutations))
             if response.status_code == 200 or response.status_code == 202:
                 print(f"Data berhasil ditambahkan ke Sanity.")
+                print(f"Jumlah data yang berhasil disimpan: {len(data)}")  # Menampilkan jumlah data
+
             else:
                 print(f"Error saat menambahkan data: {response.status_code}, {response.text}")
         except Exception as e:
