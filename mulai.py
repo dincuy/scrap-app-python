@@ -27,11 +27,11 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
-        case "TDJBM1" | "VJABAR153":
+        case "DTTTBR153" | "VJABAR153":
             bulatkan = 10000
-        case "VJABAR255" | "TDJBM2" | "SDJB3G3":
+        case "VJABAR255" | "DTTTBR255" | "VJBR33":
             bulatkan = 15000
-        case "VJBR35" | "SDJB3G5":
+        case "VJBR35" | "SDA3G5NA":
             bulatkan = 16000
     return bulatkan
 
@@ -264,6 +264,33 @@ def scrap_from_url(source_urls, product):
     processed_urls = 0
     listAktif = [
         "TDSL2",
+        "DTTTBR153",
+        "DTTTBR255",
+        "DXBP5K1",
+        "DXBP2K5",
+        "FLASH255",
+        "MGB4",
+        "MGB5",
+        "MGBMI3",
+        "MG2SKSH",
+        "MGMLM12",
+        "MGM3",
+        "MGA3",
+        "SDA3G5NA",
+        "TDKM3",
+        "TDKM17",
+        "TDKM37",
+        "TFLASHK2",
+        "TFLASHK3",
+        "TFLASHK4",
+        "TFLASHK5",
+        "TFLASHK6",
+        "TFLASHK7",
+        "TFLASHK8",
+        "SDG10",
+        "TFLASHK11",
+        "TFLASHS12",
+        "TSELMINI27",
         "VJABAR153",
         "VJABAR255",
         "VJBR33",
@@ -278,7 +305,12 @@ def scrap_from_url(source_urls, product):
         "MGM1GB1",
         "MGB1",
         "MGX1",
-        "TDJBM6"
+        "TDJBM6",
+        "XLDB153",
+        "XHPRO1",
+        "DXBP2K7",
+        "XHPRO4",
+        "XLDB357"
     ]
 
     for source in sources:
