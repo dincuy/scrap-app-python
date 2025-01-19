@@ -114,7 +114,6 @@ paket_internet_urls = [
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=4",
             "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-jumbo",
-            "https://isipulsa.web.id/harga/paket-internet/xl-paket-harian-592"
         ],
     },
 ]
@@ -148,7 +147,12 @@ voucher_internet_urls = [
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/xl-xtra-combo-flex-508",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-combo-flex",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-hotrod-spesial",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-paket-harian",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-2k",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-3k",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-5k",  
         ],
     },
 ]
@@ -266,8 +270,6 @@ def scrap_from_url(source_urls, product):
         "TDSL2",
         "DTTTBR153",
         "DTTTBR255",
-        "DXBP5K1",
-        "DXBP2K5",
         "FLASH255",
         "MGB4",
         "MGB5",
@@ -306,11 +308,40 @@ def scrap_from_url(source_urls, product):
         "MGB1",
         "MGX1",
         "TDJBM6",
+        # paket internet xl
+        "XLDB5001",
+        "DXBP5K1",
+        "DXBP2K3",
+        "DXBP5K3",
         "XLDB153",
+        "DXBP2K5",
+        "XLDB255",
         "XHPRO1",
-        "DXBP2K7",
+        "XLDB357",
         "XHPRO4",
-        "XLDB357"
+        "XHPRO2",
+        "DXBP2K7",
+        "XCFS",
+        "XCFSS",
+        "FLMM",
+        "XCFL",
+        # inject voucher xl
+        "IVXFLXS",
+        "IVXFLS",
+        "AVXHS3",
+        "AVXHS4",
+        "IVXBP2K5",
+        "IVXBP2K7",
+        "IVXBP2K10",
+        "AXLBB3K1",
+        "AXLBB3K5",
+        "AXLBB3K7",
+        "AXLBB3K10",
+        "IVXBP5K1",
+        "IVXBP5K3",
+        "IVXBP2K3",
+        "AVXSM2",
+        "AXLBB3K3",
     ]
 
     for source in sources:
