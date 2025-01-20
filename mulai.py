@@ -27,12 +27,30 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
-        case "DTTTBR153":
+        case "DTTTBR153" | "UVTJBR1":
             bulatkan = 10000
-        case "DTTTBR255":
+        case "DTTTBR255" | "UVTJBR2" | "MGB4":
             bulatkan = 15000
         case "SDA3G5NA":
             bulatkan = 16000
+        case "MG2SKSH":
+            bulatkan = 18000
+        case "TFLASHK2":
+            bulatkan = 24000
+        case "TFLASHK3":
+            bulatkan = 26000
+        case "MGM3":
+            bulatkan = 30000
+        case "TFLASHK4":
+            bulatkan = 34000
+        case "TFLASHK5":
+            bulatkan = 35000
+        case "TFLASHK7":
+            bulatkan = 39000
+        case "TFLASHK8":
+            bulatkan = 40000
+        case "MGA3":
+            bulatkan = 41000
     return bulatkan
 
 
@@ -293,10 +311,14 @@ def scrap_from_url(source_urls, product):
     total_urls = sum(len(source["urls"]) for source in sources)
     processed_urls = 0
     listAktif = [
+        # inject voucher telkomsel
+        "UVTJBR1",
+        "UVTJBR2",
+        "UVTJBR3",
+        
         "TDSL2",
         "DTTTBR153",
         "DTTTBR255",
-        "FLASH255",
         "MGB4",
         "MGB5",
         "MGBMI3",
@@ -380,6 +402,43 @@ def scrap_from_url(source_urls, product):
         "ISPURE10",
         "ISATPR20",
         "IDFNP16",
+        # inject voucher axis
+        "CAXXS1",
+        "CAB1",
+        "CAB4",
+        "CAB5",
+        "CAD2",
+        "AVZMINI1",
+        "CAM2",
+        
+        # paket internet axis
+        "MGA1",
+        
+        # inject voucher byu
+        "UVBYU11",
+        "UVBYU21",
+        "UVBYU33",
+        "UVBYU47",
+        "UVBYU7",
+        "UVBYU9",
+        "UVBYU14",
+        "UVBYU20",
+        # paket internet byu
+        "PBS001",
+        "DBY50502",
+        "PBS003",
+        "DBY50501",
+        "PBS003M",
+        "PBN8H5",
+        "PBS007",
+        "DFB2",
+        "DBY50921",
+        "PBS007B",
+        "DBY50922",
+        "BYDBL14",
+        "DBBY19",
+        "DBBY21",
+        "PDBY50956",
     ]
 
     for source in sources:
