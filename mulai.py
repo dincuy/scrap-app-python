@@ -129,9 +129,13 @@ voucher_internet_urls = [
     {
         "provider": "indosat",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/indosat-freedom-u",
-            "https://isipulsa.web.id/harga/voucher-internet/indosat-old-freedom-324",
-            "https://isipulsa.web.id/harga/voucher-internet/indosat-freedom-mini-harian",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-u",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo-attack",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-freedom-internet-mini-jateng-jabar",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-lokal-jawa-barat-dan-jawa-tengah",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-freedom-mini-nasional",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-freedom-bulanan-nasional"
         ],
     },
     {
@@ -153,6 +157,12 @@ voucher_internet_urls = [
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-2k",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-3k",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-5k",  
+        ],
+    },
+    {
+        "provider": "byu",
+        "urls": [
+            "https://isipulsa.web.id/harga/fitur-voucher/byu-aktivasi-voucher-byu",
         ],
     },
 ]
@@ -342,6 +352,28 @@ def scrap_from_url(source_urls, product):
         "IVXBP2K3",
         "AVXSM2",
         "AXLBB3K3",
+        # inject voucher indosat
+        "IVFR1GB",
+        "IVFCWJ2G1",
+        "ACFRE1",
+        "ACFRE15",
+        "ACFRE25",
+        "ACFRE35",
+        "IV1U",
+        "IVFC6",
+        # paket internet indosat
+        "IDYRN3",
+        "SGYLOW23",
+        "IDGY33",
+        "IDUP1A",
+        "ID1",
+        "ID2",
+        "ISPURE15",
+        "ISATPURE25",
+        "ISPURE5",
+        "ISPURE10",
+        "ISATPR20",
+        "IDFNP16",
     ]
 
     for source in sources:
