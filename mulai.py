@@ -27,11 +27,11 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
-        case "DTTTBR153" | "VJABAR153":
+        case "DTTTBR153":
             bulatkan = 10000
-        case "VJABAR255" | "DTTTBR255" | "VJBR33":
+        case "DTTTBR255":
             bulatkan = 15000
-        case "VJBR35" | "SDA3G5NA":
+        case "SDA3G5NA":
             bulatkan = 16000
     return bulatkan
 
@@ -116,14 +116,29 @@ paket_internet_urls = [
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-jumbo",
         ],
     },
+    {
+        "provider": "byu",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-harian",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-bulanan",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-bulanan?page=2",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-topping",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-data-kaget",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-unlimited",
+        ],
+    },
 ]
 
 voucher_internet_urls = [
     {
         "provider": "axis",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/axis-aigo",
-            "https://isipulsa.web.id/harga/voucher-internet/axis-nasional",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-mini",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-boy",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-youtube-dan-sosmed",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-jumbo",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-bonus-kuota-jawa",  
         ],
     },
     {
@@ -141,7 +156,8 @@ voucher_internet_urls = [
     {
         "provider": "telkomsel",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/telkomsel-khusus-daerah-jawa-barat",
+            "https://isipulsa.web.id/harga/fitur-voucher/telkomsel-aktivasi-jawa-barat",
+            
         ],
     },
     {
@@ -303,17 +319,7 @@ def scrap_from_url(source_urls, product):
         "TFLASHK11",
         "TFLASHS12",
         "TSELMINI27",
-        "VJABAR153",
-        "VJABAR255",
-        "VJBR33",
-        "VJBR35",
-        "VJABAR357",
-        "VAX1H1",
         "IV1",
-        "VAXM1H3",
-        "VAX1SH3",
-        "VABMI3",
-        "VAX2SH7",
         "MGM1GB1",
         "MGB1",
         "MGX1",
