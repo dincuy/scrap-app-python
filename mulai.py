@@ -31,7 +31,7 @@ def konversi_harga(kode, nominal):
             bulatkan = 10000
         case "DTTTBR255" | "UVTJBR2" | "MGB4":
             bulatkan = 15000
-        case "SDA3G5NA":
+        case "SDA3G5NA" | "SDZ4":
             bulatkan = 16000
         case "MG2SKSH":
             bulatkan = 18000
@@ -39,7 +39,7 @@ def konversi_harga(kode, nominal):
             bulatkan = 24000
         case "TFLASHK3":
             bulatkan = 26000
-        case "MGM3":
+        case "MGM3" | "SDZ8":
             bulatkan = 30000
         case "TFLASHK4":
             bulatkan = 34000
@@ -315,6 +315,10 @@ def scrap_from_url(source_urls, product):
         "UVTJBR1",
         "UVTJBR2",
         "UVTJBR3",
+        "SDZ1",
+        "SDZ3",
+        "SDZ4",
+        "SDZ8",
         
         "TDSL2",
         "DTTTBR153",
@@ -364,21 +368,14 @@ def scrap_from_url(source_urls, product):
         "FLMM",
         "XCFL",
         # inject voucher xl
-        "IVXFLXS",
-        "IVXFLS",
-        "AVXHS3",
-        "AVXHS4",
         "IVXBP2K5",
         "IVXBP2K7",
-        "IVXBP2K10",
         "AXLBB3K1",
         "AXLBB3K5",
         "AXLBB3K7",
-        "AXLBB3K10",
         "IVXBP5K1",
         "IVXBP5K3",
         "IVXBP2K3",
-        "AVXSM2",
         "AXLBB3K3",
         # inject voucher indosat
         "IVFR1GB",
