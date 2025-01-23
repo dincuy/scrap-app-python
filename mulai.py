@@ -39,7 +39,7 @@ def konversi_harga(kode, nominal):
             bulatkan = 24000
         case "TFLASHK3":
             bulatkan = 26000
-        case "MGM3" | "SDZ8":
+        case "MGM3" | "SDZ8" | "CAHMN5":
             bulatkan = 30000
         case "TFLASHK4":
             bulatkan = 34000
@@ -407,6 +407,8 @@ def scrap_from_url(source_urls, product):
         "CAD2",
         "AVZMINI1",
         "CAM2",
+        "CAW4",
+        "CAHMN5",
         
         # paket internet axis
         "MGA1",
