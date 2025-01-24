@@ -27,30 +27,40 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
-        case "DTTTBR153" | "UVTJBR1":
+        case "AXLBB3K1" | "XLDB5001":
+            bulatkan = 4000
+        case "CAXXS1" | "DXBP5K1":
+            bulatkan = 6000                                                 
+        case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
             bulatkan = 10000
-        case "DTTTBR255" | "UVTJBR2" | "MGB4":
+        case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255":
             bulatkan = 15000
-        case "SDA3G5NA" | "SDZ4":
+        case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3":
             bulatkan = 16000
-        case "MG2SKSH":
+        case "MG2SKSH" | "CAD2":
             bulatkan = 18000
-        case "TFLASHK2":
-            bulatkan = 24000
+        case "IDRM5":
+            bulatkan = 20000
+        case "MGA1":
+            bulatkan = 21000
         case "TFLASHK3":
             bulatkan = 26000
+        case "UVBYU9":
+            bulatkan = 28000
         case "MGM3" | "SDZ8" | "CAHMN5":
             bulatkan = 30000
-        case "TFLASHK4":
+        case "XCFSS":
             bulatkan = 34000
+        case "IV1U":
+            bulatkan = 36000
         case "TFLASHK5":
             bulatkan = 35000
-        case "TFLASHK7":
-            bulatkan = 39000
         case "TFLASHK8":
             bulatkan = 40000
         case "MGA3":
             bulatkan = 41000
+        case "FLMM":
+            bulatkan = 48000
     return bulatkan
 
 
@@ -96,7 +106,8 @@ paket_internet_urls = [
             "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan?page=2",
             "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
             "https://isipulsa.web.id/harga/paket-internet/indosat-yellow",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-max"
+            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-max",
+            "https://isipulsa.web.id/harga/paket-kuota/indosat-freedom-kuota-harian",
         ],
     },
     {
@@ -320,28 +331,19 @@ def scrap_from_url(source_urls, product):
         "SDZ4",
         "SDZ8",
         
-        "TDSL2",
         "DTTTBR153",
         "DTTTBR255",
         "MGB4",
         "MGB5",
-        "MGBMI3",
         "MG2SKSH",
-        "MGMLM12",
         "MGM3",
         "MGA3",
         "SDA3G5NA",
         "TDKM3",
         "TDKM17",
-        "TDKM37",
-        "TFLASHK2",
         "TFLASHK3",
-        "TFLASHK4",
         "TFLASHK5",
-        "TFLASHK6",
-        "TFLASHK7",
         "TFLASHK8",
-        "SDG10",
         "TFLASHK11",
         "TFLASHS12",
         "TSELMINI27",
@@ -358,10 +360,7 @@ def scrap_from_url(source_urls, product):
         "XLDB153",
         "DXBP2K5",
         "XLDB255",
-        "XHPRO1",
         "XLDB357",
-        "XHPRO4",
-        "XHPRO2",
         "DXBP2K7",
         "XCFS",
         "XCFSS",
@@ -378,10 +377,8 @@ def scrap_from_url(source_urls, product):
         "IVXBP2K3",
         "AXLBB3K3",
         # inject voucher indosat
-        "IVFR1GB",
         "IVFCWJ2G1",
         "ACFRE1",
-        "ACFRE15",
         "ACFRE25",
         "ACFRE35",
         "IV1U",
@@ -390,7 +387,6 @@ def scrap_from_url(source_urls, product):
         "IDYRN3",
         "SGYLOW23",
         "IDGY33",
-        "IDUP1A",
         "ID1",
         "ID2",
         "ISPURE15",
@@ -398,7 +394,8 @@ def scrap_from_url(source_urls, product):
         "ISPURE5",
         "ISPURE10",
         "ISATPR20",
-        "IDFNP16",
+        "FREMINI255",
+        "IDRM5",
         # inject voucher axis
         "CAXXS1",
         "CAB1",
@@ -406,12 +403,11 @@ def scrap_from_url(source_urls, product):
         "CAB5",
         "CAD2",
         "AVZMINI1",
-        "CAM2",
-        "CAW4",
         "CAHMN5",
         
         # paket internet axis
         "MGA1",
+        "MGA2",
         
         # inject voucher byu
         "UVBYU11",
@@ -423,7 +419,6 @@ def scrap_from_url(source_urls, product):
         "UVBYU14",
         "UVBYU20",
         # paket internet byu
-        "PBS001",
         "DBY50502",
         "PBS003",
         "DBY50501",
@@ -433,7 +428,6 @@ def scrap_from_url(source_urls, product):
         "DFB2",
         "DBY50921",
         "PBS007B",
-        "DBY50922",
         "BYDBL14",
         "DBBY19",
         "DBBY21",
