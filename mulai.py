@@ -27,13 +27,11 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
-        case "AXLBB3K1" | "XLDB5001":
-            bulatkan = 4000
         case "CAXXS1" | "DXBP5K1":
             bulatkan = 6000                                                 
         case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
             bulatkan = 10000
-        case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255":
+        case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7":
             bulatkan = 15000
         case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3":
             bulatkan = 16000
@@ -43,6 +41,8 @@ def konversi_harga(kode, nominal):
             bulatkan = 20000
         case "MGA1":
             bulatkan = 21000
+        case "XCFS":
+            bulatkan = 22000
         case "TFLASHK3":
             bulatkan = 26000
         case "UVBYU9":
@@ -59,8 +59,6 @@ def konversi_harga(kode, nominal):
             bulatkan = 40000
         case "MGA3":
             bulatkan = 41000
-        case "FLMM":
-            bulatkan = 48000
     return bulatkan
 
 
@@ -353,9 +351,7 @@ def scrap_from_url(source_urls, product):
         "MGX1",
         "TDJBM6",
         # paket internet xl
-        "XLDB5001",
         "DXBP5K1",
-        "DXBP2K3",
         "DXBP5K3",
         "XLDB153",
         "DXBP2K5",
@@ -364,17 +360,13 @@ def scrap_from_url(source_urls, product):
         "DXBP2K7",
         "XCFS",
         "XCFSS",
-        "FLMM",
-        "XCFL",
         # inject voucher xl
         "IVXBP2K5",
         "IVXBP2K7",
-        "AXLBB3K1",
         "AXLBB3K5",
         "AXLBB3K7",
         "IVXBP5K1",
         "IVXBP5K3",
-        "IVXBP2K3",
         "AXLBB3K3",
         # inject voucher indosat
         "IVFCWJ2G1",
@@ -389,7 +381,6 @@ def scrap_from_url(source_urls, product):
         "IDGY33",
         "ID1",
         "ID2",
-        "ISPURE15",
         "ISATPURE25",
         "ISPURE5",
         "ISPURE10",
@@ -423,7 +414,6 @@ def scrap_from_url(source_urls, product):
         "PBS003",
         "DBY50501",
         "PBS003M",
-        "PBN8H5",
         "PBS007",
         "DFB2",
         "DBY50921",
