@@ -31,9 +31,11 @@ def konversi_harga(kode, nominal):
             bulatkan = 6000                                                 
         case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
             bulatkan = 10000
+        case "DBY50921":
+            bulatkan = 14000
         case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7":
             bulatkan = 15000
-        case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3":
+        case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3" | "ACFRE35":
             bulatkan = 16000
         case "MG2SKSH" | "CAD2":
             bulatkan = 18000
