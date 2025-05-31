@@ -3,48 +3,72 @@ paket_internet_urls = [
         "provider": "axis",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional",
-            "https://isipulsa.web.id/harga/paket-internet/axis-masa-aktif-1-bulan",
+            "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional?page=2",
+            "https://isipulsa.web.id/harga/paket-kuota/axis-masa-aktif-1-bulan",
+            # "https://isipulsa.web.id/harga/paket-internet/axis-bonus-lokal-jawa"
         ],
     },
     {
         "provider": "indosat",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/indosat-11",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-new-freedom",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-plus",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-mini",
             "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-yellow",
+            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-max",
+            "https://isipulsa.web.id/harga/paket-kuota/indosat-freedom-kuota-harian",
         ],
     },
     {
         "provider": "telkomsel",
         "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-10",
+            # paket kuota
+            "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jawa-barat",
+            
+            # Paket Internet Telkomsel (Kuota Mini)
             "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-lokal-jabotabek-dan-jawa-barat",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-malam",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-sesuai-zona",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-m-kios",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=3",
+            
+            # Paket Kuota Telkomsel (Kuota Lokal - Jabotabek dan Jawa Barat)
+            "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jabotabek-dan-jawa-barat",
+            
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash?page=3",
         ],
     },
     {
         "provider": "three",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/three-23",
-            "https://isipulsa.web.id/harga/paket-internet/three-happy",
             "https://isipulsa.web.id/harga/paket-internet/three-kuota-mini",
+            "https://isipulsa.web.id/harga/paket-internet/three-happy",
+            "https://isipulsa.web.id/harga/paket-internet/three-happy?page=2",
             "https://isipulsa.web.id/harga/paket-internet/three-data-bulanan",
-            "https://isipulsa.web.id/harga/paket-internet/three-tanpa-pembagian",
-            "https://isipulsa.web.id/harga/paket-internet/three-kuota-jumbo",
         ],
     },
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-hemat-bulanan",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=3",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=4",
+            "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
+            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-jumbo",
+        ],
+    },
+    {
+        "provider": "byu",
+        "urls": [
+            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-harian",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-bulanan",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-bulanan?page=2",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-topping",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-data-kaget",
+            "https://isipulsa.web.id/harga/paket-kuota/byu-unlimited",
         ],
     },
 ]
@@ -53,23 +77,29 @@ voucher_internet_urls = [
     {
         "provider": "axis",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/axis-aigo",
-            "https://isipulsa.web.id/harga/voucher-internet/axis-mini-kuota-379",
-            "https://isipulsa.web.id/harga/voucher-internet/axis-bonus-kuota-jawa",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-mini?page=1",
+            
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-boy",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-youtube-dan-sosmed",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-jumbo",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo",
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-bonus-kuota-jawa",  
         ],
     },
     {
         "provider": "indosat",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/indosat-freedom-u",
-            "https://isipulsa.web.id/harga/voucher-internet/indosat-old-freedom-324",
-            "https://isipulsa.web.id/harga/voucher-internet/indosat-freedom-mini-harian",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-u",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo-attack",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo",
+            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-lokal-jawa-barat",
         ],
     },
     {
         "provider": "telkomsel",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/telkomsel-khusus-daerah-jawa-barat",
+            "https://isipulsa.web.id/harga/fitur-voucher/telkomsel-aktivasi-jawa-barat",
+            
         ],
     },
     {
@@ -79,7 +109,18 @@ voucher_internet_urls = [
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/xl-xtra-combo-flex-508",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-combo-flex",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-hotrod-spesial",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-paket-harian",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-2k",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-3k",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-5k",  
+        ],
+    },
+    {
+        "provider": "byu",
+        "urls": [
+            "https://isipulsa.web.id/harga/fitur-voucher/byu-aktivasi-voucher-byu",
         ],
     },
 ]

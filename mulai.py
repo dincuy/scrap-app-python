@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import time
 # from konversi import konversi_harga, get_total_harga_pulsa
-# from source_urls import source_urls
+from source_urls import source_urls
+from helper.listAktif import listAktif
 
 def hapus_rp(nominal):
     nominal_int = int(''.join(filter(str.isdigit, nominal)))
@@ -28,25 +29,29 @@ def konversi_harga(kode, nominal):
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
         case "CAXXS1" | "DXBP5K1":
-            bulatkan = 6000                                                 
+            bulatkan = 7000                                                 
         case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
             bulatkan = 10000
+        case "AXLBB3K3":
+            bulatkan = 11000
+        case "TDKM17" | "IVXBP2K5":
+            bulatkan = 12000
         case "DBY50921":
             bulatkan = 14000
         case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7":
             bulatkan = 15000
         case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3" | "ACFRE35":
             bulatkan = 16000
-        case "MG2SKSH" | "CAD2":
+        case "MG2SKSH" | "CAD2" | "TSELMINI27":
             bulatkan = 18000
         case "IDRM5":
             bulatkan = 20000
-        case "MGA1":
+        case "MGA1" | "AXLBB3K7":
             bulatkan = 21000
         case "XCFS":
             bulatkan = 22000
         case "TFLASHK3":
-            bulatkan = 26000
+            bulatkan = 25000
         case "UVBYU9":
             bulatkan = 28000
         case "MGM3" | "SDZ8" | "CAHMN5":
@@ -56,6 +61,8 @@ def konversi_harga(kode, nominal):
         case "IV1U":
             bulatkan = 36000
         case "TFLASHK5":
+            bulatkan = 34000
+        case "TDJBM6":
             bulatkan = 35000
         case "TFLASHK8":
             bulatkan = 40000
@@ -87,159 +94,6 @@ def get_total_harga_pulsa(str_nominal):
 # Contoh penggunaan
 # print(konversi_harga("Rp. 5000", 2000))
 # print(get_total_harga_pulsa("Pulsa 3000"))
-
-paket_internet_urls = [
-    {
-        "provider": "axis",
-        "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional",
-            "https://isipulsa.web.id/harga/paket-internet/axis-kuota-harian-nasional?page=2",
-            # "https://isipulsa.web.id/harga/paket-internet/axis-masa-aktif-1-bulan",
-            "https://isipulsa.web.id/harga/paket-internet/axis-bonus-lokal-jawa"
-        ],
-    },
-    {
-        "provider": "indosat",
-        "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/indosat-11",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan?page=2",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-yellow",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-max",
-            "https://isipulsa.web.id/harga/paket-kuota/indosat-freedom-kuota-harian",
-        ],
-    },
-    {
-        "provider": "telkomsel",
-        "urls": [
-            # paket kuota
-            "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jawa-barat",
-            # paket internet
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=2",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=3",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash-full",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash-full?page=2",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash-full?page=3"
-        ],
-    },
-    {
-        "provider": "three",
-        "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/three-23",
-            "https://isipulsa.web.id/harga/paket-internet/three-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/three-happy",
-            "https://isipulsa.web.id/harga/paket-internet/three-happy?page=2",
-            "https://isipulsa.web.id/harga/paket-internet/three-data-bulanan",
-        ],
-    },
-    {
-        "provider": "xl",
-        "urls": [
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=2",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=3",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=4",
-            "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-jumbo",
-        ],
-    },
-    {
-        "provider": "byu",
-        "urls": [
-            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-harian",
-            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-bulanan",
-            "https://isipulsa.web.id/harga/paket-kuota/byu-kuota-bulanan?page=2",
-            "https://isipulsa.web.id/harga/paket-kuota/byu-topping",
-            "https://isipulsa.web.id/harga/paket-kuota/byu-data-kaget",
-            "https://isipulsa.web.id/harga/paket-kuota/byu-unlimited",
-        ],
-    },
-]
-
-voucher_internet_urls = [
-    {
-        "provider": "axis",
-        "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-mini",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-boy",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-youtube-dan-sosmed",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-jumbo",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-bonus-kuota-jawa",  
-        ],
-    },
-    {
-        "provider": "indosat",
-        "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-u",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo-attack",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-freedom-internet-mini-jateng-jabar",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-lokal-jawa-barat-dan-jawa-tengah",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-freedom-mini-nasional",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-freedom-bulanan-nasional"
-        ],
-    },
-    {
-        "provider": "telkomsel",
-        "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/telkomsel-aktivasi-jawa-barat",
-            
-        ],
-    },
-    {
-        "provider": "three",
-        "urls": ["https://isipulsa.web.id/harga/voucher-internet/three-always-on"],
-    },
-    {
-        "provider": "xl",
-        "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-combo-flex",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-hotrod-spesial",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-paket-harian",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-2k",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-3k",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-5k",  
-        ],
-    },
-    {
-        "provider": "byu",
-        "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/byu-aktivasi-voucher-byu",
-        ],
-    },
-]
-
-pulsa_urls = [
-    {
-        "provider": "axis",
-        "urls": ["https://isipulsa.web.id/harga/pulsa/axis-5"],
-    },
-    {
-        "provider": "indosat",
-        "urls": ["https://isipulsa.web.id/harga/pulsa/indosat-2"],
-    },
-    {
-        "provider": "telkomsel",
-        "urls": ["https://isipulsa.web.id/harga/pulsa/telkomsel-1"],
-    },
-    {
-        "provider": "three",
-        "urls": ["https://isipulsa.web.id/harga/pulsa/three-4"],
-    },
-    {
-        "provider": "xl",
-        "urls": ["https://isipulsa.web.id/harga/pulsa/xl-3"],
-    },
-]
-
-source_urls = {
-    "pulsa": pulsa_urls,
-    "paket-internet": paket_internet_urls,
-    "voucher-internet": voucher_internet_urls,
-}
 
 # Konfigurasi API Sanity
 SANITY_PROJECT_ID = "bkraz3f2"  # Ganti dengan Project ID Anda
@@ -321,110 +175,6 @@ def scrap_from_url(source_urls, product):
 
     total_urls = sum(len(source["urls"]) for source in sources)
     processed_urls = 0
-    listAktif = [
-        # inject voucher telkomsel
-        "UVTJBR1",
-        "UVTJBR2",
-        "UVTJBR3",
-        "SDZ1",
-        "SDZ3",
-        "SDZ4",
-        "SDZ8",
-        
-        "DTTTBR153",
-        "DTTTBR255",
-        "MGB4",
-        "MGB5",
-        "MG2SKSH",
-        "MGM3",
-        "MGA3",
-        "SDA3G5NA",
-        "TDKM3",
-        "TDKM17",
-        "TFLASHK3",
-        "TFLASHK5",
-        "TFLASHK8",
-        "TFLASHK11",
-        "TFLASHS12",
-        "TSELMINI27",
-        "IV1",
-        "MGM1GB1",
-        "MGB1",
-        "MGX1",
-        "TDJBM6",
-        # paket internet xl
-        "DXBP5K1",
-        "DXBP5K3",
-        "XLDB153",
-        "DXBP2K5",
-        "XLDB255",
-        "XLDB357",
-        "DXBP2K7",
-        "XCFS",
-        "XCFSS",
-        # inject voucher xl
-        "IVXBP2K5",
-        "IVXBP2K7",
-        "AXLBB3K5",
-        "AXLBB3K7",
-        "IVXBP5K1",
-        "IVXBP5K3",
-        "AXLBB3K3",
-        # inject voucher indosat
-        "IVFCWJ2G1",
-        "ACFRE1",
-        "ACFRE25",
-        "ACFRE35",
-        "IV1U",
-        "IVFC6",
-        # paket internet indosat
-        "IDYRN3",
-        "SGYLOW23",
-        "IDGY33",
-        "ID1",
-        "ID2",
-        "ISATPURE25",
-        "ISPURE5",
-        "ISPURE10",
-        "ISATPR20",
-        "FREMINI255",
-        "IDRM5",
-        # inject voucher axis
-        "CAXXS1",
-        "CAB1",
-        "CAB4",
-        "CAB5",
-        "CAD2",
-        "AVZMINI1",
-        "CAHMN5",
-        
-        # paket internet axis
-        "MGA1",
-        "MGA2",
-        
-        # inject voucher byu
-        "UVBYU11",
-        "UVBYU21",
-        "UVBYU33",
-        "UVBYU47",
-        "UVBYU7",
-        "UVBYU9",
-        "UVBYU14",
-        "UVBYU20",
-        # paket internet byu
-        "DBY50502",
-        "PBS003",
-        "DBY50501",
-        "PBS003M",
-        "PBS007",
-        "DFB2",
-        "DBY50921",
-        "PBS007B",
-        "BYDBL14",
-        "DBBY19",
-        "DBBY21",
-        "PDBY50956",
-    ]
 
     for source in sources:
         provider = source["provider"]
