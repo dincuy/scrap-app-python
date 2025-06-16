@@ -32,13 +32,15 @@ def konversi_harga(kode, nominal):
             bulatkan = 7000                                                 
         case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
             bulatkan = 10000
-        case "AXLBB3K3":
+        case "AXLBB3K3" | "XLDB153":
             bulatkan = 11000
         case "TDKM17" | "IVXBP2K5":
             bulatkan = 12000
-        case "DBY50921":
+        case "CAB1" | "MGB1" | "SDZ1":
+            bulatkan = 13000
+        case "DBY50921" | "AVISWJFISM3":
             bulatkan = 14000
-        case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7":
+        case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7" | "AVISWJFIMI3":
             bulatkan = 15000
         case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3" | "ACFRE35":
             bulatkan = 16000
@@ -54,7 +56,7 @@ def konversi_harga(kode, nominal):
             bulatkan = 25000
         case "UVBYU9":
             bulatkan = 28000
-        case "MGM3" | "SDZ8" | "CAHMN5":
+        case "MGM3" | "SDZ8" | "CAHMN5" | "AXBRONET5":
             bulatkan = 30000
         case "XCFSS":
             bulatkan = 34000
