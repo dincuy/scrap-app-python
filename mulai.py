@@ -172,7 +172,8 @@ def scrap_from_url(source_urls, product):
     kategori = {
         "paket-internet": "paket internet",
         "voucher-internet": "voucher internet",
-        "pulsa": "pulsa"
+        "pulsa": "pulsa",
+        "topup-game": "topup game",
     }.get(product, "lainnya")  # Sesuaikan kategori dengan skema
 
     total_urls = sum(len(source["urls"]) for source in sources)
@@ -275,7 +276,8 @@ def hapus_dan_scrap_data(source_urls, product):
     kategori = {
         "paket-internet": "paket internet",
         "voucher-internet": "voucher internet",
-        "pulsa": "pulsa"
+        "pulsa": "pulsa",
+        "topup-game": "topup game"
     }.get(product, "lainnya")
     
     # Hapus data terlebih dahulu
@@ -287,8 +289,8 @@ def hapus_dan_scrap_data(source_urls, product):
     return data
 
 # Input dari pengguna
-pilih_product = ["paket-internet", "voucher-internet", "pulsa"]
-paket = input("Pilih paket (paket-internet, voucher-internet, pulsa): ").strip().lower()
+pilih_product = ["paket-internet", "voucher-internet", "pulsa", "topup-game"]
+paket = input("Pilih paket (paket-internet, voucher-internet, pulsa, topup-game): ").strip().lower()
 
 while True:
     if paket in pilih_product:

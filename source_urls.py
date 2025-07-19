@@ -148,8 +148,28 @@ pulsa_urls = [
     },
 ]
 
+topup_game_urls = [
+    {
+        "provider": "free-fire",
+        "urls": [
+            "https://isipulsa.web.id/harga/free-fire/diamond?page=1",
+            "https://isipulsa.web.id/harga/free-fire/diamond?page=2",
+            
+        ]
+    },
+    {
+        "provider": "mobile-legend",
+        "urls": [
+            "https://isipulsa.web.id/harga/mobile-legend/diamond-143?page=1",
+            "https://isipulsa.web.id/harga/mobile-legend/diamond-143?page=2",
+            "https://isipulsa.web.id/harga/mobile-legend/diamond-143?page=3",
+        ]
+    }
+]
+
 source_urls = {
     "pulsa": pulsa_urls,
     "paket-internet": paket_internet_urls,
     "voucher-internet": voucher_internet_urls,
+    "topup-game": topup_game_urls,
 }
