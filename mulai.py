@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 # from konversi import konversi_harga, get_total_harga_pulsa
 from source_urls import source_urls
-from helper.listAktif import listAktif
+from helper.list_aktif import paket_internet_voucher, topup_game
 
 def hapus_rp(nominal):
     nominal_int = int(''.join(filter(str.isdigit, nominal)))
@@ -28,6 +28,14 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
+        case "FFP5":
+            bulatkan = 2000
+        case "FFP10":
+            bulatkan = 3000
+        case "FFP15":
+            bulatkan = 4000
+        case "FFP20":
+            bulatkan = 5000
         case "CAXXS1" | "DXBP5K1":
             bulatkan = 7000                                                 
         case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
@@ -42,7 +50,7 @@ def konversi_harga(kode, nominal):
             bulatkan = 14000
         case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7" | "AVISWJFIMI3":
             bulatkan = 15000
-        case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3" | "ACFRE35":
+        case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3" | "ACFRE35" | "FFP100":
             bulatkan = 16000
         case "MG2SKSH" | "CAD2" | "TSELMINI27":
             bulatkan = 18000
@@ -54,9 +62,11 @@ def konversi_harga(kode, nominal):
             bulatkan = 22000
         case "TFLASHK3":
             bulatkan = 25000
-        case "UVBYU9":
+        case "UVBYU9" | "FFP190":
             bulatkan = 28000
-        case "MGM3" | "SDZ8" | "CAHMN5" | "AXBRONET5":
+        case "FFP200":
+            bulatkan = 29000
+        case "MGM3" | "SDZ8" | "CAHMN5" | "AXBRONET5" | "FFP210":
             bulatkan = 30000
         case "XCFSS":
             bulatkan = 34000
@@ -66,10 +76,22 @@ def konversi_harga(kode, nominal):
             bulatkan = 34000
         case "TDJBM6":
             bulatkan = 35000
-        case "TFLASHK8":
+        case "TFLASHK8" | "FFP280":
             bulatkan = 40000
         case "MGA3":
             bulatkan = 41000
+        case "FFP355":
+            bulatkan = 50000
+        case "FFP375":
+            bulatkan = 52000
+        case "FFP425":
+            bulatkan = 62000
+        case "FFP510":
+            bulatkan = 70000
+        case "FFP635":
+            bulatkan = 90000
+        case "FFP720":
+            bulatkan = 97000
     return bulatkan
 
 
@@ -167,6 +189,13 @@ def scrap_from_url(source_urls, product):
     current_time = datetime.now().isoformat()  # Menggunakan format ISO-8601 yang valid
     collected_ids = set()  # Untuk mengecek duplikasi
     duplicates = []  # Menyimpan kode yang duplikat
+    
+    list_aktif_now = {
+        "paket-internet": paket_internet_voucher,
+        "voucher-internet": paket_internet_voucher,
+        # "pulsa": "pulsa",
+        "topup-game": topup_game
+    }.get(product, "lainnya")
 
     # Tentukan kategori berdasarkan produk yang dipilih
     kategori = {
@@ -200,7 +229,7 @@ def scrap_from_url(source_urls, product):
                     harga = hapus_rp(strHaga)
                     harga_jual = get_total_harga_pulsa(produk) if product == "pulsa" else konversi_harga(kode, harga)
                     order = row.select_one("td:nth-child(4)").text.strip()
-                    aktif = True if kode in listAktif else False
+                    aktif = True if kode in list_aktif_now else False
 
                     # Cek duplikasi berdasarkan kode
                     if kode in collected_ids:

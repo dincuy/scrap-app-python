@@ -1,4 +1,4 @@
-listAktif = [
+paket_internet_voucher = [
     # inject voucher telkomsel
     # (3 hari)
     "UVTJBR1",
@@ -146,4 +146,38 @@ listAktif = [
     "DBBY19",
     "DBBY21",
     "PDBY50956",
+]
+
+topup_game = [
+    # freefire
+    "FFP5",
+    "FFP10",
+    "FFP15",
+    "FFP20",
+    "FFP25",
+    "FFP30",
+    "FFP40",
+    "FFP55",
+    "FFP70",
+    "FFP80",
+    "FFP100",
+    "FFP120",
+    "FFP140",
+    "FFP150",
+    "FFP160",
+    "FFP190",
+    "FFP200",
+    "FFP210",
+    "FFP280",
+    "FFP355",
+    "FFP375",
+    "FFP405",
+    "FFP400",
+    "FFP425",
+    "FFP475",
+    "FFP510",
+    "PFF565",
+    "FFP600",
+    "FFP635",
+    "FFP720",
 ]
