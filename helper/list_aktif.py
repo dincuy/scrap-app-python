@@ -12,18 +12,24 @@ paket_internet_voucher = [
     "SDZ8",
     
     # paket internet telkomsel
+    # (1 hari)
+    "TSELMINI11",
     # (3 hari)
-    "DTTTBR153",
-    # "TDKM3",
+    "TDJBM1",
+    "SDJB2G3",
     "SDJB3G3",
     # (5 hari)
-    # "DTTTBR255",
     "TDJBM2",
     "SDA3G5NA",
+    "TDJBM4",
+    "TDJBM5",
     # (7 hari)
     "TDKM17",
     "TSELMINI27",
+    "TDJBM3",
+    "SDJB7G7",
     # (30 hari)
+    "TBKLJBTK230",
     "TFLASHK3",
     "TFLASHK5",
     "TDJBM6",
@@ -46,7 +52,9 @@ paket_internet_voucher = [
     # paket internet axis
     # (1 hari)
     "MGM1GB1",
+    "MGXS3",
     # (3 hari)
+    "MGB800",
     "MGB1",
     "MGB4",
     "MGB5",
