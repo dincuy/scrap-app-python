@@ -29,10 +29,8 @@ paket_internet_voucher = [
     "TDJBM3",
     "SDJB7G7",
     # (30 hari)
-    "TBKLJBTK230",
     "TFLASHK3",
     "TFLASHK5",
-    "TDJBM6",
     "TFLASHK8",
     "TFLASHK11",
     "TFLASHS12",
@@ -62,17 +60,13 @@ paket_internet_voucher = [
     "MGX1",
     "MG2SKSH",
     # (15 hari)
+    "MGHMN4",
     "MGM3",
     # (30 hari)
     "AXBRONET3",
     "AXBRONET5",
-
-    "MGA1",
-    "MGA2",
-    
-    "MGA3",
-    
-    "IV1",
+    "AXBRONET8",
+    "AXBRONET10",
     
     # inject voucher xl
     # (1 hari)
@@ -96,9 +90,13 @@ paket_internet_voucher = [
     # (5 hari)
     "DXBP2K5", 
     "XLDB255",
+    "DXBP5K5",
     # (7 hari)
     "DXBP2K7",
     "XLDB357",
+    # (15 hari)
+    "DXBP2K15",
+    "XLDB7515",
     # (30 hari)
     "XCFS",
     "XCFSS",
@@ -118,10 +116,12 @@ paket_internet_voucher = [
     "ACFRE35",
     "IV1U",
     "IVFC6",
+    
     # paket internet indosat
-    "IDYRN3",
+    # (1 hari)
+    "IDYRN1",
+    
     "SGYLOW23",
-    "IDGY33",
     "ID1",
     "ID2",
     "ISATPURE25",
@@ -137,6 +137,10 @@ paket_internet_voucher = [
     "UVBYU21",
     "UVBYU33",
     "UVBYU47",
+    
+    # (3 hari)
+    "BYDH3H3",
+    
     "UVBYU7",
     "UVBYU9",
     "UVBYU14",
