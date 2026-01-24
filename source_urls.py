@@ -74,14 +74,12 @@ paket_internet_urls = [
     {
         "provider": "smartfren",
         "urls": [
-            "https://isipulsa.web.id/harga/paket-kuota/smartfren-kuota-evo-modem",
             "https://isipulsa.web.id/harga/paket-kuota/smartfren-volume-based",
             "https://isipulsa.web.id/harga/paket-kuota/smartfren-extra-data",
             "https://isipulsa.web.id/harga/paket-internet/smartfren-unlimited",
             "https://isipulsa.web.id/harga/paket-internet/smartfren-mini-kuota-233",
             "https://isipulsa.web.id/harga/paket-internet/smartfren-kuota-non-stop",
             "https://isipulsa.web.id/harga/paket-internet/smartfren-super-kuota",
-            
         ]
     }
 ]
