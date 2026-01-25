@@ -159,6 +159,35 @@ paket_internet_voucher = [
     "DBBY19",
     "DBBY21",
     "PDBY50956",
+    
+    # paket internet three
+    # 1 hari
+    "TPHY21",
+    # 2 hari
+    "RHN6GB2",
+    # 3 hari
+    "TRHS3M3",
+    "TRHS5M3",
+    "RH6GB3",
+    # 5 hari
+    "TDAMP1",
+    "TRIMD25",
+    "RH4GB5",
+    "THNMD6",
+    # 7 hari
+    "TRHS1M7",
+    "TRHWE5",
+    "RH12GB7",
+    # 28 hari
+    "TRHJ7",
+    "TDH10",
+    "TDH15GB30",
+    "THNMD18",
+    # 30 hari
+    "TRIPU330",
+    "TDP430",
+    "TRP10",
+    "TRP15",
 ]
 
 topup_game = [
