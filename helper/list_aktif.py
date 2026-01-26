@@ -98,8 +98,11 @@ paket_internet_voucher = [
     "DXBP2K15",
     "XLDB7515",
     # (30 hari)
-    "XCFS",
     "XCFSS",
+    "XCFSP",
+    "XCB33",
+    "XL19",
+    "XL21",
     
     # inject voucher indosat
     # (1 hari)
@@ -188,6 +191,24 @@ paket_internet_voucher = [
     "TDP430",
     "TRP10",
     "TRP15",
+    
+    # paket internet smartfren
+    # 3 hari
+    "SMNI13",
+    "SLK4G3",
+    # 5 hari
+    "SMNI35",
+    # 7 hari
+    "SMDTL10A",
+    "SLK6G7",
+    # 14 hari
+    "SMNPI14",
+    "SLK10G14",
+    # 30 hari
+    "SLK5G30",
+    "SIP6N",
+    "SNS6LM",
+    "SMARTUNNON12",
 ]
 
 topup_game = [
