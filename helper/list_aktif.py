@@ -59,6 +59,7 @@ paket_internet_voucher = [
     # (5 hari)
     "MGX1",
     "MG2SKSH",
+    "MG3SKS",
     # (15 hari)
     "MGHMN4",
     "MGM3",
@@ -100,9 +101,6 @@ paket_internet_voucher = [
     # (30 hari)
     "XCFSS",
     "XCFSP",
-    "XCB33",
-    "XL19",
-    "XL21",
     
     # inject voucher indosat
     # (1 hari)

@@ -40,7 +40,7 @@ paket_internet_urls = [
         ],
     },
     {
-        "provider": "three",
+        "provider": "tri",
         "urls": [
             "https://isipulsa.web.id/harga/paket-internet/three-23",
             "https://isipulsa.web.id/harga/paket-internet/three-kuota-mini",
@@ -57,7 +57,6 @@ paket_internet_urls = [
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=3",
             "https://isipulsa.web.id/harga/paket-internet/xl-kuota-mini?page=4",
             "https://isipulsa.web.id/harga/paket-internet/xl-xtra-combo-flex",
-            "https://isipulsa.web.id/harga/paket-internet/xl-kuota-jumbo",
         ],
     },
     {
@@ -114,7 +113,7 @@ voucher_internet_urls = [
         ],
     },
     {
-        "provider": "three",
+        "provider": "tri",
         "urls": ["https://isipulsa.web.id/harga/voucher-internet/three-always-on"],
     },
     {
