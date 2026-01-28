@@ -16,7 +16,6 @@ paket_internet_urls = [
             "https://isipulsa.web.id/harga/paket-internet/indosat-mini-kuota-bulanan?page=2",
             "https://isipulsa.web.id/harga/paket-internet/indosat-old-freedom",
             "https://isipulsa.web.id/harga/paket-internet/indosat-yellow",
-            "https://isipulsa.web.id/harga/paket-internet/indosat-freedom-internet-max",
             "https://isipulsa.web.id/harga/paket-kuota/indosat-freedom-kuota-harian",
         ],
     },

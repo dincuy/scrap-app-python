@@ -24,7 +24,6 @@ paket_internet_voucher = [
     "TDJBM4",
     "TDJBM5",
     # (7 hari)
-    "TDKM17",
     "TSELMINI27",
     "TDJBM3",
     "SDJB7G7",
@@ -50,7 +49,6 @@ paket_internet_voucher = [
     # paket internet axis
     # (1 hari)
     "MGM1GB1",
-    "MGXS3",
     # (3 hari)
     "MGB800",
     "MGB1",
@@ -98,9 +96,13 @@ paket_internet_voucher = [
     # (15 hari)
     "DXBP2K15",
     "XLDB7515",
-    # (30 hari)
+    # (28 hari)
     "XCFSS",
     "XCFSP",
+    "XCFM",
+    "FLMM",
+    "XCFL",
+    "FLLL",
     
     # inject voucher indosat
     # (1 hari)
@@ -121,17 +123,21 @@ paket_internet_voucher = [
     # paket internet indosat
     # (1 hari)
     "IDYRN1",
+    # 7 hari
+    "IDRM7",
     
     "SGYLOW23",
     "ID1",
     "ID2",
-    "ISATPURE25",
     "ISPURE5",
     "ISPURE10",
     "ISATPR20",
     "FREMINI255",
     "IDRM5",
-    
+    # 28 hari
+    "IDFNP25",
+    # 30 hari
+    "ISPURE3",
     
     # inject voucher byu
     "UVBYU11",
@@ -139,27 +145,39 @@ paket_internet_voucher = [
     "UVBYU33",
     "UVBYU47",
     
-    # (3 hari)
-    "BYDH3H3",
-    
+    # (3 hari)    
     "UVBYU7",
     "UVBYU9",
     "UVBYU14",
     "UVBYU20",
     
     # paket internet byu
+    # 3 hari
+    "DBYUJ4G3H",
+    
     "DBY50502",
-    "PBS003",
     "DBY50501",
     "PBS003M",
-    "PBS007",
-    "DFB2",
     "DBY50921",
-    "PBS007B",
     "BYDBL14",
     "DBBY19",
     "DBBY21",
     "PDBY50956",
+    # 5 hari
+    "PBN8H5",
+    "DBYUJ7G5H",
+    # 7 hari
+    "DBY50779",
+    "PBN8H9",
+    "PBS6GB7H",
+    # 14 hari
+    "BYUDSK11G1",
+    # 30 hari
+    "BYUM51587",
+    "BYUB10",
+    "BYUM51589",
+    "BYUB15",
+    "BYUM51591",
     
     # paket internet three
     # 1 hari
