@@ -14,9 +14,11 @@ paket_internet_voucher = [
     # paket internet telkomsel
     # (1 hari)
     "TSELMINI11",
+    "DTRJAB51",
+    # 2 hari
+    "DTRJAB52",
     # (3 hari)
     "TDJBM1",
-    "SDJB2G3",
     "SDJB3G3",
     # (5 hari)
     "TDJBM2",
