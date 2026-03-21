@@ -1,7 +1,6 @@
 paket_internet_voucher = [
     # inject voucher telkomsel
     # (3 hari)
-    "UVTJBR1",
     "SDZ1",
     "SDZ3",
     # (5 hari)
@@ -42,11 +41,11 @@ paket_internet_voucher = [
     # (3 hari)
     "CAB1",
     "CAB5",
+    # (2 hari)
+    "CAXSS5",
     # (5 hari)
     "AVZMINI1",
     "CAD2",
-    # (15 hari)
-    "CAHMN5",
     
     # paket internet axis
     # (1 hari)

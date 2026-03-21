@@ -28,76 +28,22 @@ def konversi_harga(kode, nominal):
     # Format ke dalam Rupiah dengan format yang diinginkan
     # return "Rp. {:,}".format(bulatkan).replace(",", ".")
     match kode:
-        case "FFP5" | "DMLL3":
-            bulatkan = 2000
-        case "FFP10" | "DMLL5":
-            bulatkan = 3000
-        case "FFP15":
-            bulatkan = 4000
-        case "FFP20" | "ML11":
-            bulatkan = 5000
-        case "CAXXS1" | "DXBP5K1":
-            bulatkan = 7000                                                 
-        case "DTTTBR153" | "UVTJBR1" | "IVFCWJ2G1":
-            bulatkan = 10000
-        case "AXLBB3K3" | "XLDB153":
+        case "CAXSS5":
             bulatkan = 11000
-        case "TDKM17" | "IVXBP2K5" | "DMLL30":
-            bulatkan = 12000
-        case "CAB1" | "MGB1" | "SDZ1":
+        case "AXLBB3K3":
             bulatkan = 13000
-        case "DBY50921" | "AVISWJFISM3":
-            bulatkan = 14000
-        case "DTTTBR255" | "UVTJBR2" | "MGB4" | "ACFRE25" | "AVZMINI1" | "MGX1" | "FREMINI255" | "IVXBP2K7" | "DXBP2K7" | "AVISWJFIMI3":
+        case "AVZMINI1":
             bulatkan = 15000
-        case "SDA3G5NA" | "SDZ4" | "IVXBP5K3" | "DXBP5K3" | "ACFRE35" | "FFP100":
+        case "SDZ1":
             bulatkan = 16000
-        case "MG2SKSH" | "CAD2" | "TSELMINI27":
+        case "CAD2" | "IVXBP2K7":
+            bulatkan = 17000
+        case "SDZ3" | "IVXBP5K3" | "AXLBB3K5":
             bulatkan = 18000
-        case "IDRM5":
-            bulatkan = 20000
-        case "MGA1" | "AXLBB3K7":
-            bulatkan = 21000
-        case "XCFS" | "DMLL70":
-            bulatkan = 22000
-        case "TFLASHK3":
-            bulatkan = 25000
-        case "UVBYU9" | "FFP190":
-            bulatkan = 28000
-        case "FFP200":
+        case "AXLBB3K7":
+            bulatkan = 24000
+        case "SDZ8":
             bulatkan = 29000
-        case "MGM3" | "SDZ8" | "CAHMN5" | "AXBRONET5" | "FFP210":
-            bulatkan = 30000
-        case "XCFSS":
-            bulatkan = 34000
-        case "ML114":
-            bulatkan = 35000
-        case "IV1U":
-            bulatkan = 36000
-        case "TFLASHK5":
-            bulatkan = 34000
-        case "TDJBM6":
-            bulatkan = 35000
-        case "DMLL129":
-            bulatkan = 38000
-        case "TFLASHK8" | "FFP280":
-            bulatkan = 40000
-        case "MGA3" | "ML140":
-            bulatkan = 41000
-        case "DMLL153":
-            bulatkan = 44000
-        case "FFP355" | "DMLL153":
-            bulatkan = 50000
-        case "FFP375" | "ML183":
-            bulatkan = 52000
-        case "FFP425":
-            bulatkan = 62000
-        case "FFP510":
-            bulatkan = 70000
-        case "FFP635":
-            bulatkan = 90000
-        case "FFP720":
-            bulatkan = 97000
     return bulatkan
 
 
