@@ -118,8 +118,6 @@ voucher_internet_urls = [
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-combo-flex",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-hotrod-spesial",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-paket-harian",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-2k",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-3k",

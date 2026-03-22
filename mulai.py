@@ -13,8 +13,16 @@ def hapus_rp(nominal):
 
 def konversi_harga(kode, nominal):
     # Tentukan keuntungan berdasarkan nominal
-    profit = 2000 if nominal < 50000 else 3000
-
+    profit = 1000
+    if nominal < 9999:
+        profit = 1000
+    elif nominal > 9999 and nominal < 24999:
+        profit = 2000
+    elif nominal > 24999 and nominal < 100000:
+        profit = 3000
+    else:
+        profit = 5000
+        
     # Hitung total harga dengan keuntungan
     new_total_harga = nominal + profit
 

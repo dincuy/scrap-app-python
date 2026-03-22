@@ -119,7 +119,6 @@ paket_internet_voucher = [
     "ACFRE25",
     "ACFRE35",
     "IV1U",
-    "IVFC6",
     
     # paket internet indosat
     # (1 hari)
