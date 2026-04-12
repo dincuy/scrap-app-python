@@ -184,6 +184,10 @@ def scrap_from_url(source_urls, product):
                     order = row.select_one("td:nth-child(4)").text.strip()
                     aktif = True if kode in list_aktif_now else False
 
+                    # Ambil link dari elemen <a>
+                    link_tag = row.select_one("a")
+                    link = link_tag.get("href") if link_tag else None
+
                     # Cek duplikasi berdasarkan kode
                     if kode in collected_ids:
                         duplicates.append(kode)
@@ -199,14 +203,15 @@ def scrap_from_url(source_urls, product):
                         "kode": kode,
                         "provider": provider,
                         "jenisPaket": " ".join(title.split(" ")[1:]),
-                        "kategori": kategori,  # Menggunakan kategori sesuai skema
+                        "kategori": kategori,
                         "produk": produk,
                         "desc": desc,
                         "harga": harga,
                         "hargaJual": harga_jual,
                         "order": order,
                         "aktif": aktif,
-                        "dibuatPada": current_time  # Menggunakan format ISO-8601
+                        "link": link,  # field baru
+                        "dibuatPada": current_time
                     })
             except Exception as e:
                 print(f"Error saat mengakses {url}: {e}")
