@@ -153,6 +153,7 @@ def scrap_from_url(source_urls, product):
     kategori = {
         "paket-internet": "paket internet",
         "aktivasi-voucher-internet": "aktivasi voucher internet",
+        "voucher-internet": "voucher internet",
         "pulsa": "pulsa",
         "topup-game": "topup game",
     }.get(product, "lainnya")  # Sesuaikan kategori dengan skema
@@ -257,6 +258,7 @@ def hapus_dan_scrap_data(source_urls, product):
     kategori = {
         "paket-internet": "paket internet",
         "aktivasi-voucher-internet": "aktivasi voucher internet",
+        "voucher-internet": "voucher internet",
         "pulsa": "pulsa",
         "topup-game": "topup game"
     }.get(product, "lainnya")

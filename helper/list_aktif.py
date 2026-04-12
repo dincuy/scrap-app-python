@@ -1,5 +1,7 @@
 paket_internet_voucher = [
     # inject voucher telkomsel
+    # (1 hari)
+    "UVTJBR1",
     # (3 hari)
     "SDZ1",
     "SDZ3",
