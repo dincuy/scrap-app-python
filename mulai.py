@@ -12,47 +12,39 @@ def hapus_rp(nominal):
     return nominal_int
 
 def konversi_harga(kode, nominal):
-    # Tentukan keuntungan berdasarkan nominal
-    profit = 1000
-    if nominal < 9999:
+    # Daftar harga khusus berdasarkan kode
+    harga_khusus = {
+        "A04": 20000,
+        "A06": 15000
+    }
+    
+    # Jika kode ada di harga khusus, langsung kembalikan nilainya
+    if kode in harga_khusus:
+        return harga_khusus[kode]
+    
+    # Pembulatan nominal ke ribuan
+    sisa = nominal % 1000
+    dasar = nominal - sisa
+    
+    if sisa <= 500:
+        nominal_bulat = dasar
+    else:
+        nominal_bulat = dasar + 1000
+
+    # Penentuan profit
+    if nominal_bulat <= 7000:
         profit = 1000
-    elif nominal > 9999 and nominal < 24999:
+    elif nominal_bulat <= 20000:
         profit = 2000
-    elif nominal > 24999 and nominal < 100000:
+    elif nominal_bulat <= 100000:
         profit = 3000
     else:
         profit = 5000
-        
-    # Hitung total harga dengan keuntungan
-    new_total_harga = nominal + profit
 
-    # Dapatkan ribuan dan ratusan
-    ribuan = (new_total_harga // 1000) * 1000
-    ratusan = new_total_harga % 1000
+    # Harga jual akhir
+    harga_jual = nominal_bulat + profit
 
-    # Bulatkan sesuai aturan yang diberikan
-    bulatkan = ribuan + 1000 if ratusan >= 500 else ribuan
-
-    # Format ke dalam Rupiah dengan format yang diinginkan
-    # return "Rp. {:,}".format(bulatkan).replace(",", ".")
-    match kode:
-        case "CAXSS5":
-            bulatkan = 11000
-        case "AXLBB3K3":
-            bulatkan = 13000
-        case "AVZMINI1":
-            bulatkan = 15000
-        case "SDZ1":
-            bulatkan = 16000
-        case "CAD2" | "IVXBP2K7":
-            bulatkan = 17000
-        case "SDZ3" | "IVXBP5K3" | "AXLBB3K5":
-            bulatkan = 18000
-        case "AXLBB3K7":
-            bulatkan = 24000
-        case "SDZ8":
-            bulatkan = 29000
-    return bulatkan
+    return harga_jual
 
 
 def get_total_harga_pulsa(str_nominal):
@@ -152,7 +144,7 @@ def scrap_from_url(source_urls, product):
     
     list_aktif_now = {
         "paket-internet": paket_internet_voucher,
-        "voucher-internet": paket_internet_voucher,
+        "aktivasi-voucher-internet": paket_internet_voucher,
         # "pulsa": "pulsa",
         "topup-game": topup_game
     }.get(product, "lainnya")
@@ -160,7 +152,7 @@ def scrap_from_url(source_urls, product):
     # Tentukan kategori berdasarkan produk yang dipilih
     kategori = {
         "paket-internet": "paket internet",
-        "voucher-internet": "voucher internet",
+        "aktivasi-voucher-internet": "aktivasi voucher internet",
         "pulsa": "pulsa",
         "topup-game": "topup game",
     }.get(product, "lainnya")  # Sesuaikan kategori dengan skema
@@ -264,7 +256,7 @@ def hapus_dan_scrap_data(source_urls, product):
     # Tentukan kategori berdasarkan produk
     kategori = {
         "paket-internet": "paket internet",
-        "voucher-internet": "voucher internet",
+        "aktivasi-voucher-internet": "aktivasi voucher internet",
         "pulsa": "pulsa",
         "topup-game": "topup game"
     }.get(product, "lainnya")
@@ -278,16 +270,16 @@ def hapus_dan_scrap_data(source_urls, product):
     return data
 
 # Input dari pengguna
-pilih_product = ["paket-internet", "voucher-internet", "pulsa", "topup-game"]
-paket = input("Pilih paket (paket-internet, voucher-internet, pulsa, topup-game): ").strip().lower()
+pilih_product = ["paket-internet", "aktivasi-voucher-internet", "voucher-internet", "pulsa", "topup-game"]
+paket = input("Pilih paket (paket-internet, aktivasi-voucher-internet, voucher-internet, pulsa, topup-game): ").strip().lower()
 
 while True:
     if paket in pilih_product:
         print(f"Paket yang dipilih adalah: {paket.replace('-', ' ').title()}")
         break
     else:
-        print("Paket tidak valid. Silakan pilih dari paket yang tersedia: paket-internet, voucher-internet, pulsa.")
-        paket = input("Pilih paket (paket-internet, voucher-internet, pulsa): ").strip().lower()
+        print("Paket tidak valid. Silakan pilih dari paket yang tersedia: paket-internet, aktivasi-voucher-internet, pulsa.")
+        paket = input("Pilih paket (paket-internet, aktivasi-voucher-internet, pulsa): ").strip().lower()
 
 # Panggil fungsi gabungan
 hapus_dan_scrap_data(source_urls, paket)

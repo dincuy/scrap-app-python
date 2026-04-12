@@ -82,7 +82,7 @@ paket_internet_urls = [
     }
 ]
 
-voucher_internet_urls = [
+aktivasi_voucher_internet_urls = [
     {
         "provider": "axis",
         "urls": [
@@ -113,7 +113,7 @@ voucher_internet_urls = [
     },
     {
         "provider": "tri",
-        "urls": ["https://isipulsa.web.id/harga/voucher-internet/three-always-on"],
+        "urls": ["https://isipulsa.web.id/harga/aktivasi-voucher-internet/three-always-on"],
     },
     {
         "provider": "xl",
@@ -130,6 +130,42 @@ voucher_internet_urls = [
             "https://isipulsa.web.id/harga/fitur-voucher/byu-aktivasi-voucher-byu",
         ],
     },
+]
+
+voucher_internet_urls = [
+    {
+        "provider": "axis",
+        "urls": ["https://isipulsa.web.id/harga/voucher-internet/axis-nasional"]
+    },
+    {
+        "provider": "telkomsel",
+        "urls": ["https://isipulsa.web.id/harga/voucher-internet/telkomsel-khusus-daerah-jawa-barat"]
+    },
+    {
+        "provider": "tri",
+        "urls": ["https://isipulsa.web.id/harga/voucher-internet/three-happy-lokal-jawa-barat"]
+    },
+    {
+        "provider": "xl",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/xl-paket-harian",
+            "https://isipulsa.web.id/harga/voucher-internet/xl-bebas-puas-2k",
+            "https://isipulsa.web.id/harga/voucher-internet/xl-bebas-puas-3k",
+            "https://isipulsa.web.id/harga/voucher-internet/xl-bebas-puas-5k",
+            "https://isipulsa.web.id/harga/voucher-internet/xl-flex-max-mini-746",
+        ]
+    },
+    {
+        "provider": "byu",
+        "urls": ["https://isipulsa.web.id/harga/voucher-internet/byu-harian"]
+    },
+    {
+        "provider": "smartfren",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/smartfren-175",
+            "https://isipulsa.web.id/harga/voucher-internet/smartfren-mini-kuota",
+        ]
+    }
 ]
 
 pulsa_urls = [
@@ -177,6 +213,7 @@ topup_game_urls = [
 source_urls = {
     "pulsa": pulsa_urls,
     "paket-internet": paket_internet_urls,
+    "aktivasi-voucher-internet": aktivasi_voucher_internet_urls,
     "voucher-internet": voucher_internet_urls,
     "topup-game": topup_game_urls,
 }
