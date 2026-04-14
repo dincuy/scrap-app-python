@@ -1,33 +1,4 @@
-paket_internet_voucher = [
-    # voucher digital telkomsel
-    # (1 hari)
-    "VJABN4G1",
-    # (2 hari)
-    "VDF5G2",
-    # (3 hari)
-    "VJABAR153",
-    "VJBR33",
-    # (5 hari)
-    "VJABAR255",
-    "VJBR35",
-    "VTSJBRMI5",
-    # (7 hari)
-    "VJABAR357",
-    "TVJBR3A",
-
-    # inject voucher telkomsel
-    # (1 hari)
-    "UVTJBR1",
-    # (3 hari)
-    "SDZ1",
-    "SDZ3",
-    # (5 hari)
-    "UVTJBR2",
-    "SDZ4",
-    # (7 hari)
-    "UVTJBR3",
-    "SDZ8",
-    
+paket_internet = [
     # paket internet telkomsel
     # (1 hari)
     "TSELMINI11",
@@ -65,18 +36,6 @@ paket_internet_voucher = [
     # (5 hari)
     "VABMI3",
     
-    # inject voucher axis
-    # (1 hari)
-    "CAXXS1",
-    # (3 hari)
-    "CAB1",
-    "CAB5",
-    # (2 hari)
-    "CAXSS5",
-    # (5 hari)
-    "AVZMINI1",
-    "CAD2",
-    
     # paket internet axis
     # (1 hari)
     "MGM1GB1",
@@ -97,19 +56,6 @@ paket_internet_voucher = [
     "AXBRONET5",
     "AXBRONET8",
     "AXBRONET10",
-    
-    # inject voucher xl
-    # (1 hari)
-    "IVXBP5K1",
-    # (3 hari)
-    "AXLBB3K3",
-    "IVXBP5K3",
-    # (5 hari)
-    "IVXBP2K5",
-    "AXLBB3K5",
-    # (7 hari)
-    "IVXBP2K7",
-    "AXLBB3K7",
     
     # paket internet xl
     # (1 hari)
@@ -135,21 +81,6 @@ paket_internet_voucher = [
     "XCFL",
     "FLLL",
     
-    # inject voucher indosat
-    # (1 hari)
-    "AVISWJFIXS2",
-    # (3 hari)
-    "AVISWJFISM3",
-    "AVISWJFISM5",
-    # (5 hari)
-    "AVISWJFIMI3",
-    
-    "IVFCWJ2G1",
-    "ACFRE1",
-    "ACFRE25",
-    "ACFRE35",
-    "IV1U",
-    
     # paket internet indosat
     # (1 hari)
     "IDYRN1",
@@ -168,18 +99,6 @@ paket_internet_voucher = [
     "IDFNP25",
     # 30 hari
     "ISPURE3",
-    
-    # inject voucher byu
-    "UVBYU11",
-    "UVBYU21",
-    "UVBYU33",
-    "UVBYU47",
-    
-    # (3 hari)    
-    "UVBYU7",
-    "UVBYU9",
-    "UVBYU14",
-    "UVBYU20",
     
     # paket internet byu
     # 3 hari
@@ -255,6 +174,91 @@ paket_internet_voucher = [
     "SIP6N",
     "SNS6LM",
     "SMARTUNNON12",
+]
+
+aktivasi_voucher_internet = [
+    # inject voucher telkomsel
+    # (1 hari)
+    "UVTJBR1",
+    # (3 hari)
+    "SDZ1",
+    "SDZ3",
+    # (5 hari)
+    "UVTJBR2",
+    "SDZ4",
+    # (7 hari)
+    "UVTJBR3",
+    "SDZ8",
+    
+    # inject voucher axis
+    # (1 hari)
+    "CAXXS1",
+    # (3 hari)
+    "CAB1",
+    "CAB5",
+    # (2 hari)
+    "CAXSS5",
+    # (5 hari)
+    "AVZMINI1",
+    "CAD2",
+    
+    # inject voucher xl
+    # (1 hari)
+    "IVXBP5K1",
+    # (3 hari)
+    "AXLBB3K3",
+    "IVXBP5K3",
+    # (5 hari)
+    "IVXBP2K5",
+    "AXLBB3K5",
+    # (7 hari)
+    "IVXBP2K7",
+    "AXLBB3K7",
+    
+    # inject voucher indosat
+    # (1 hari)
+    "AVISWJFIXS2",
+    # (3 hari)
+    "AVISWJFISM3",
+    "AVISWJFISM5",
+    # (5 hari)
+    "AVISWJFIMI3",
+    
+    "IVFCWJ2G1",
+    "ACFRE1",
+    "ACFRE25",
+    "ACFRE35",
+    "IV1U",
+    
+    # inject voucher byu
+    "UVBYU11",
+    "UVBYU21",
+    "UVBYU33",
+    "UVBYU47",
+    
+    # (3 hari)    
+    "UVBYU7",
+    "UVBYU9",
+    "UVBYU14",
+    "UVBYU20",
+]
+
+voucher_internet = [
+    # voucher digital telkomsel
+    # (1 hari)
+    "VJABN4G1",
+    # (2 hari)
+    "VDF5G2",
+    # (3 hari)
+    "VJABAR153",
+    "VJBR33",
+    # (5 hari)
+    "VJABAR255",
+    "VJBR35",
+    "VTSJBRMI5",
+    # (7 hari)
+    "VJABAR357",
+    "TVJBR3A",
 ]
 
 topup_game = [

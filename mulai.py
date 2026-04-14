@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 # from konversi import konversi_harga, get_total_harga_pulsa
 from source_urls import source_urls
-from helper.list_aktif import paket_internet_voucher, topup_game
+from helper.list_aktif import paket_internet, voucher_internet, aktivasi_voucher_internet, topup_game
 # import manual data
 from manual_data.paket_internet import data_paket_internet
 from manual_data.aktivasi_voucher import data_aktivasi_voucher
@@ -165,8 +165,9 @@ def scrap_from_url(source_urls, product):
     duplicates = []  # Menyimpan kode yang duplikat
     
     list_aktif_now = {
-        "paket-internet": paket_internet_voucher,
-        "aktivasi-voucher-internet": paket_internet_voucher,
+        "paket-internet": paket_internet,
+        "aktivasi-voucher-internet": aktivasi_voucher_internet,
+        "voucher-internet": voucher_internet,
         # "pulsa": "pulsa",
         "topup-game": topup_game
     }.get(product, "lainnya")
