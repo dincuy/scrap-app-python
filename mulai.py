@@ -18,8 +18,7 @@ def hapus_rp(nominal):
 def konversi_harga(kode, nominal):
     # Daftar harga khusus berdasarkan kode
     harga_khusus = {
-        "A04": 20000,
-        "A06": 15000
+        "CAXXS1": 8000,
     }
     
     # Jika kode ada di harga khusus, langsung kembalikan nilainya
