@@ -67,4 +67,19 @@ data_aktivasi_voucher = [
         "aktif": True,
         "link": "",
     },
+    
+    # xl
+    {
+        "kode": "UVXFM4G3-PR",
+        "provider": "xl",
+        "jenisPaket": "UNLOCK VOC XL FLEX MINI",
+        "kategori": "aktivasi voucher internet",
+        "produk": "Inject Voucher - Aktivasi Vocer Flex Mini 4GB / 3 hari",
+        "desc": "prasticareload.com",
+        "harga": 11905,
+        "hargaJual": 15000,
+        "order": "ORDER",
+        "aktif": True,
+        "link": "",
+    },
 ]

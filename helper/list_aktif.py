@@ -186,18 +186,15 @@ aktivasi_voucher_internet = [
     # inject voucher axis
     # (1 hari)
     "CAXXS1",
-    # (3 hari)
-    "CAB1",
-    "CAB5",
-    # (2 hari)
-    "CAXSS5",
     # (5 hari)
     "AVZMINI1",
     "CAD2",
+    # (7 hari)
+    "AVZMINI2",
     
     # inject voucher xl
     # (1 hari)
-    "IVXBP5K1",
+    "AXLMF4G1H",
     # (3 hari)
     "AXLBB3K3",
     "IVXBP5K3",

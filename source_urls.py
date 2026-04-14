@@ -86,13 +86,7 @@ aktivasi_voucher_internet_urls = [
     {
         "provider": "axis",
         "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-mini?page=1",
-            
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-boy",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo-youtube-dan-sosmed",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-jumbo",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-aigo",
-            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-bonus-kuota-jawa",  
+            "https://isipulsa.web.id/harga/fitur-voucher/axis-aktivasi-kuota-mini?page=1",            
         ],
     },
     {
@@ -118,10 +112,10 @@ aktivasi_voucher_internet_urls = [
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-paket-harian",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-2k",
             "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-3k",
-            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-5k",  
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-bebas-puas-5k",
+            "https://isipulsa.web.id/harga/fitur-voucher/xl-aktivasi-flex-max-mini",
         ],
     },
     {

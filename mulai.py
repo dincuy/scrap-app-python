@@ -19,6 +19,9 @@ def konversi_harga(kode, nominal):
     # Daftar harga khusus berdasarkan kode
     harga_khusus = {
         "CAXXS1": 8000,
+        "AVZMINI1": 15000,
+        "UVAM6GB3-PR": 16000,
+        "AXLMF4G1H": 8000,
     }
     
     # Jika kode ada di harga khusus, langsung kembalikan nilainya
@@ -155,6 +158,50 @@ def get_manual_data(product):
 
     return manual_list
 
+KODE_SKIP = {
+    "IVXBP2K1",
+    "AXLBB3K1",
+    "SDZ4",
+    "SDZ8",
+    "SDZ14",
+    "SDZ16",
+    "ACJBR2030",
+    "IVXBP2K3",
+    "UVTJBR4",
+    "UVAM2C",
+    "CAB800",
+    "CAB4",
+    "CAB5",
+    "AXZ15G3",
+    "CAM1",
+    "UVXFM20G3",
+    "IVXBP2K5",
+    "AXLBB3K7",
+    "UVXFM20G7",
+    "IVXBP5K7",
+    "UVXFM40G7",
+    "UVXFM75G7",
+    "IVXBP5K10",
+    "AVXFH5G14H",
+    "UVXFM75",
+    "UVXFM150",
+    "IVXBP5K15",
+    "IVXBP2K30",
+    "AXLBB3K30",
+    "AXLMF5G3H",
+    "IVXBP5K3",
+    "UVXFM6G3",
+    "IVXBP5K5",
+    "AXLMF17G7H",
+    "UVXFM30",
+    "AXLBB3K15",
+    "IVXBP2K15",
+    "IVXBP5K1",
+    "CAXSS15",
+    "UVXFM10G1",
+    "UVXFM4G3",
+}
+
 # Fungsi untuk melakukan scraping data
 def scrap_from_url(source_urls, product):
     sources = source_urls[product]
@@ -198,6 +245,9 @@ def scrap_from_url(source_urls, product):
 
                 for row in soup.select("table.hidden-xs tbody tr"):
                     kode = row.select_one("td:nth-child(1)").text.strip()
+                    # Skip kode tertentu
+                    if kode in KODE_SKIP:
+                        continue
                     produk = row.select_one("td:nth-child(2)").text.strip()
                     desc = row.select_one("td:nth-child(2) b").get("data-title", "").replace("\n", " ").strip() or "tidak ada deskripsi"
                     strHaga = row.select_one("td:nth-child(3)").text.strip()
