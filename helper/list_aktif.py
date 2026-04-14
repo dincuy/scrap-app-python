@@ -1,4 +1,20 @@
 paket_internet_voucher = [
+    # voucher digital telkomsel
+    # (1 hari)
+    "VJABN4G1",
+    # (2 hari)
+    "VDF5G2",
+    # (3 hari)
+    "VJABAR153",
+    "VJBR33",
+    # (5 hari)
+    "VJABAR255",
+    "VJBR35",
+    "VTSJBRMI5",
+    # (7 hari)
+    "VJABAR357",
+    "TVJBR3A",
+
     # inject voucher telkomsel
     # (1 hari)
     "UVTJBR1",
@@ -36,6 +52,18 @@ paket_internet_voucher = [
     "TFLASHK8",
     "TFLASHK11",
     "TFLASHS12",
+    
+    # voucher digital axis
+    # (1 hari)
+    "VAX1H1",
+    # (2 hari)
+    "VAXSS5",
+    "VAXSS8",
+    # (3 hari)
+    "VAXM1H3",
+    "VAX5H3",
+    # (5 hari)
+    "VABMI3",
     
     # inject voucher axis
     # (1 hari)

@@ -6,6 +6,10 @@ import time
 # from konversi import konversi_harga, get_total_harga_pulsa
 from source_urls import source_urls
 from helper.list_aktif import paket_internet_voucher, topup_game
+# import manual data
+from manual_data.paket_internet import data_paket_internet
+from manual_data.aktivasi_voucher import data_aktivasi_voucher
+from manual_data.voucher_internet import data_voucher_internet
 
 def hapus_rp(nominal):
     nominal_int = int(''.join(filter(str.isdigit, nominal)))
@@ -134,6 +138,24 @@ def hapus_data_paket_by_kategori(kategori):
     else:
         print(f"Tidak ada dokumen 'paket' ditemukan untuk kategori '{kategori}'.")
 
+# Fungsi untuk ambil data manual
+def get_manual_data(product):
+    current_time = datetime.now().isoformat()
+
+    mapping = {
+        "paket-internet": data_paket_internet,
+        "aktivasi-voucher-internet": data_aktivasi_voucher,
+        "voucher-internet": data_voucher_internet,
+    }
+
+    manual_list = mapping.get(product, [])
+
+    # Tambahkan field dibuatPada
+    for item in manual_list:
+        item["dibuatPada"] = current_time
+
+    return manual_list
+
 # Fungsi untuk melakukan scraping data
 def scrap_from_url(source_urls, product):
     sources = source_urls[product]
@@ -222,6 +244,12 @@ def scrap_from_url(source_urls, product):
             print(f"Progress: {progress:.2f}%", end="\r")
             time.sleep(0.1)  # Optional: Untuk simulasi loading
 
+    # Ambil data manual
+    manual_data = get_manual_data(product)
+
+    # Gabungkan
+    data.extend(manual_data)
+    
     # Cek dan tampilkan duplikasi jika ada
     if duplicates:
         print(f"Duplikasi ditemukan untuk kode: {duplicates}")
