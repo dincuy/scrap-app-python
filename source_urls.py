@@ -93,7 +93,6 @@ aktivasi_voucher_internet_urls = [
         "provider": "indosat",
         "urls": [
             "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-u",
-            "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo-attack",
             "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-combo",
             "https://isipulsa.web.id/harga/fitur-voucher/indosat-aktivasi-freedom-lokal-jawa-barat",
         ],

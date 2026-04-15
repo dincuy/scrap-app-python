@@ -200,6 +200,9 @@ KODE_SKIP = {
     "CAXSS15",
     "UVXFM10G1",
     "UVXFM4G3",
+    "AXLMF17G14",
+    "IVXBP5K30",
+    "AXLMF17G14",
 }
 
 # Fungsi untuk melakukan scraping data
