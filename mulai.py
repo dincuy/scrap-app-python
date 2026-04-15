@@ -208,7 +208,15 @@ KODE_SKIP = {
     "ACJBR730",
     "UVTJBR10",
     "UVTJBR14",
-    "SDZ11",                       
+    "SDZ11",
+    "AVISWJFIBL6",
+    "AVISWJFIBL4",
+    "AVISWJFIBL7",
+    "AVISWJFIBL9",
+    "AVISWJFIBL13",
+    "AVISWJFIBL20",
+    "AVISWJFIBL30",
+    "AVISWJFIBL40",                       
 }
 
 # Fungsi untuk melakukan scraping data
