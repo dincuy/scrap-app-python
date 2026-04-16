@@ -18,6 +18,7 @@ def hapus_rp(nominal):
 def konversi_harga(kode, nominal):
     # Daftar harga khusus berdasarkan kode
     harga_khusus = {
+        # Aktivasi Voucher Internet
         "CAXXS1": 8000,
         "AVZMINI1": 15000,
         "UVAM6GB3-PR": 16000,
@@ -27,6 +28,9 @@ def konversi_harga(kode, nominal):
         "AVBYU6G7H": 18000,
         "AVBY6G3H": 16000,
         "AVBY8G7H": 21000,
+        "AVTRWJH4G1H": 9000,
+        "AVTRWJH5G2H": 12000,
+        "ZHW3GB3": 15000,
     }
     
     # Jika kode ada di harga khusus, langsung kembalikan nilainya
@@ -234,6 +238,8 @@ KODE_SKIP = {
     # Tsel
     "SDZ1",
     "SDZ3",
+    # Tri
+    "AVTRWJH3G1H",
     
 }
 

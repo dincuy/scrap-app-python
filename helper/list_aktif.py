@@ -233,6 +233,17 @@ aktivasi_voucher_internet = [
     # (7 hari)
     "AVBYU6G7H",
     "AVBY8G7H",
+    
+    # Inject Tri
+    # (1 hari)
+    "AVTRWJH4G1H",
+    "ZHW1GB1",
+    # (2 hari)
+    "AVTRWJH5G2H",
+    # (3 hari)
+    "ZHW3GB3",
+    # (7 hari)
+    "AVTRWJH10G7H",
 ]
 
 voucher_internet = [
