@@ -218,7 +218,13 @@ KODE_SKIP = {
     "AVISWJFIBL13",
     "AVISWJFIBL20",
     "AVISWJFIBL30",
-    "AVISWJFIBL40",                       
+    "AVISWJFIBL40",
+    # Byu
+    "AVBYU15G30",
+    "ACTBYSP",
+    "ACTBYSQ",
+    "ACTBYSR",
+    "ACTBYSU",
 }
 
 # Fungsi untuk melakukan scraping data
