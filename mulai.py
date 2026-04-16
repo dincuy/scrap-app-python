@@ -22,6 +22,8 @@ def konversi_harga(kode, nominal):
         "AVZMINI1": 15000,
         "UVAM6GB3-PR": 16000,
         "AXLMF4G1H": 8000,
+        "AXLBB3K3": 13000,
+        "AXLBB3K5": 18000,
     }
     
     # Jika kode ada di harga khusus, langsung kembalikan nilainya
