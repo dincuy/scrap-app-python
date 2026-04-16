@@ -24,6 +24,9 @@ def konversi_harga(kode, nominal):
         "AXLMF4G1H": 8000,
         "AXLBB3K3": 13000,
         "AXLBB3K5": 18000,
+        "AVBYU6G7H": 18000,
+        "AVBY6G3H": 16000,
+        "AVBY8G7H": 21000,
     }
     
     # Jika kode ada di harga khusus, langsung kembalikan nilainya
@@ -225,6 +228,13 @@ KODE_SKIP = {
     "ACTBYSQ",
     "ACTBYSR",
     "ACTBYSU",
+    "UVBYU1A",
+    "UVBYU23",
+    "AVBYU35G30",
+    # Tsel
+    "SDZ1",
+    "SDZ3",
+    
 }
 
 # Fungsi untuk melakukan scraping data

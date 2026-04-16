@@ -105,7 +105,7 @@ aktivasi_voucher_internet_urls = [
     },
     {
         "provider": "tri",
-        "urls": ["https://isipulsa.web.id/harga/aktivasi-voucher-internet/three-always-on"],
+        "urls": ["https://isipulsa.web.id/harga/fitur-voucher/three-aktivasi-happy-lokal-jawa-barat"],
     },
     {
         "provider": "xl",

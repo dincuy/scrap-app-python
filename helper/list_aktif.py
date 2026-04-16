@@ -209,10 +209,8 @@ aktivasi_voucher_internet = [
     # (1 hari)
     "AVISWJFIXS2",
     # (3 hari)
-    "AVISWJFISM3",
     "AVISWJFISM5",
     # (5 hari)
-    "AVISWJFIMI3",
     
     "IVFCWJ2G1",
     "ACFRE1",
@@ -231,6 +229,10 @@ aktivasi_voucher_internet = [
     "UVBYU9",
     "UVBYU14",
     "UVBYU20",
+    "AVBY6G3H",
+    # (7 hari)
+    "AVBYU6G7H",
+    "AVBY8G7H",
 ]
 
 voucher_internet = [

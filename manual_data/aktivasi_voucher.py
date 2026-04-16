@@ -132,7 +132,7 @@ data_aktivasi_voucher = [
         "harga": 14575,
         "hargaJual": 17000,
         "order": "ORDER",
-        "aktif": True,
+        "aktif": False,
         "link": "",
     },
     {
@@ -158,7 +158,7 @@ data_aktivasi_voucher = [
         "harga": 28025,
         "hargaJual": 31000,
         "order": "ORDER",
-        "aktif": True,
+        "aktif": False,
         "link": "",
     },
 ]
