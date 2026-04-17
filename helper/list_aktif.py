@@ -211,7 +211,6 @@ aktivasi_voucher_internet = [
     # (3 hari)
     "AVISWJFISM5",
     # (5 hari)
-    
     "IVFCWJ2G1",
     "ACFRE1",
     "ACFRE25",
@@ -236,12 +235,14 @@ aktivasi_voucher_internet = [
     
     # Inject Tri
     # (1 hari)
-    "AVTRWJH4G1H",
     "ZHW1GB1",
+    "AVTRWJH10G1H",
     # (2 hari)
     "AVTRWJH5G2H",
     # (3 hari)
-    "ZHW3GB3",
+    "ZHW5GB3",
+    # (5 hari)
+    "AVTRWJH5G5H",
     # (7 hari)
     "AVTRWJH10G7H",
 ]

@@ -161,4 +161,18 @@ data_aktivasi_voucher = [
         "aktif": False,
         "link": "",
     },
+    # Tri
+    {
+        "kode": "VTHWJ4C-PR",
+        "provider": "tri",
+        "jenisPaket": "VOUCHER TRI HAPPY WJ (JABAR KEC.BTN-SKB-KRW)",
+        "kategori": "aktivasi voucher internet",
+        "produk": "Inject Voucher - Aktivasi Voucher 10GB / 5 hari",
+        "desc": "prasticareload.com",
+        "harga": 18525,
+        "hargaJual": 21000,
+        "order": "ORDER",
+        "aktif": True,
+        "link": "",
+    },
 ]

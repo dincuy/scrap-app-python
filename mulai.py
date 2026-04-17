@@ -31,6 +31,8 @@ def konversi_harga(kode, nominal):
         "AVTRWJH4G1H": 9000,
         "AVTRWJH5G2H": 12000,
         "ZHW3GB3": 15000,
+        "AVTRWJH5G5H": 20000,
+        "AVTRWJH10G7H": 26000,
     }
     
     # Jika kode ada di harga khusus, langsung kembalikan nilainya
@@ -240,7 +242,19 @@ KODE_SKIP = {
     "SDZ3",
     # Tri
     "AVTRWJH3G1H",
-    
+    "IVTRWJ30H30",
+    "ZHW7GB30",
+    "ZHW11GB30",
+    "ZHW14GB30",
+    "IVTRWJ3H20",
+    "ZHW2GB1",
+    "AVTRWJH10G14H",
+    "VJABAR4",
+    "TVJH9",
+    "TVJBR3B",
+    "TVJBR3F",
+    "TVJBR3C",
+    "TVJBR3E",
 }
 
 # Fungsi untuk melakukan scraping data
