@@ -140,7 +140,6 @@ voucher_internet_urls = [
     {
         "provider": "xl",
         "urls": [
-            "https://isipulsa.web.id/harga/voucher-internet/xl-paket-harian",
             "https://isipulsa.web.id/harga/voucher-internet/xl-bebas-puas-2k",
             "https://isipulsa.web.id/harga/voucher-internet/xl-bebas-puas-3k",
             "https://isipulsa.web.id/harga/voucher-internet/xl-bebas-puas-5k",
@@ -156,6 +155,12 @@ voucher_internet_urls = [
         "urls": [
             "https://isipulsa.web.id/harga/voucher-internet/smartfren-175",
             "https://isipulsa.web.id/harga/voucher-internet/smartfren-mini-kuota",
+        ]
+    },
+    {
+        "provider": "indosat",
+        "urls": [
+            "https://isipulsa.web.id/harga/voucher-internet/indosat-lokal-bulanan-jawa-barat",
         ]
     }
 ]
