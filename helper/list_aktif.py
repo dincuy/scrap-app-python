@@ -2,29 +2,29 @@ paket_internet = [
     # paket internet telkomsel
     # (1 hari)
     "SDJB4G1",
-    "TSELMINI11",
-    "DTRJAB51",
+    "SDM71",
     # 2 hari
     "DTRJAB52",
+    "DTRJABN6G2",
     # (3 hari)
-    "TDJBM1",
+    "SDJB2G3",
     "SDJB3G3",
+    "DTRJAB43",
+    "TDJBM1C",
     # (5 hari)
     "TDJBM2",
     "SDA3G5NA",
-    "TDJBM4",
     "TDJBM5",
+    "DTRJABN4G5",
+    "DTRJABN6G5",
     # (7 hari)
     "TSELMINI27",
     "TDJBM3",
     "SDJB7G7",
+    "SDA7G7NA",
     # (30 hari)
-    "TFLASHK3",
-    "TFLASHK5",
-    "TFLASHK8",
-    "TFLASHK11",
-    "TFLASHS12",
-    
+    "TDF5",
+    "TDF6",
     # voucher digital axis
     # (1 hari)
     "VAX1H1",
@@ -36,7 +36,6 @@ paket_internet = [
     "VAX5H3",
     # (5 hari)
     "VABMI3",
-    
     # paket internet axis
     # (1 hari)
     "MGM1GB1",
@@ -48,6 +47,10 @@ paket_internet = [
     "MGX1",
     "MG2SKSH",
     "MG3SKS",
+    # (7 hari)
+    "AXD7G7H",
+    "AXD9G7H",
+    "MGM2",
     # (15 hari)
     "MGHMN4",
     "MGM3",
@@ -56,7 +59,6 @@ paket_internet = [
     "AXBRONET5",
     "AXBRONET8",
     "AXBRONET10",
-    
     # paket internet xl
     # (1 hari)
     "DXBP5K1",
@@ -64,7 +66,7 @@ paket_internet = [
     "XLDB153",
     "DXBP5K3",
     # (5 hari)
-    "DXBP2K5", 
+    "DXBP2K5",
     "XLDB255",
     "DXBP5K5",
     # (7 hari)
@@ -80,13 +82,11 @@ paket_internet = [
     "FLMM",
     "XCFL",
     "FLLL",
-    
     # paket internet indosat
     # (1 hari)
     "IDYRN1",
     # 7 hari
     "IDRM7",
-    
     "SGYLOW23",
     "ID1",
     "ID2",
@@ -99,11 +99,9 @@ paket_internet = [
     "IDFNP25",
     # 30 hari
     "ISPURE3",
-    
     # paket internet byu
     # 3 hari
     "DBYUJ4G3H",
-    
     "DBY50502",
     "DBY50501",
     "PBS003M",
@@ -127,7 +125,6 @@ paket_internet = [
     "BYUM51589",
     "BYUB15",
     "BYUM51591",
-    
     # paket internet three
     # 1 hari
     "TPHY21",
@@ -156,7 +153,6 @@ paket_internet = [
     "TDP430",
     "TRP10",
     "TRP15",
-    
     # paket internet smartfren
     # 3 hari
     "SMNI13",
@@ -182,7 +178,6 @@ aktivasi_voucher_internet = [
     # (5 hari)
     "UVTJBR2",
     # (7 hari)
-    
     # inject voucher axis
     # (1 hari)
     "CAXXS1",
@@ -191,7 +186,6 @@ aktivasi_voucher_internet = [
     "CAD2",
     # (7 hari)
     "AVZMINI2",
-    
     # inject voucher xl
     # (1 hari)
     "AXLMF4G1H",
@@ -205,7 +199,6 @@ aktivasi_voucher_internet = [
     "IVXBP2K7",
     "AXLBB3K7",
     "UVXFM10G7",
-    
     # inject voucher indosat
     # (1 hari)
     "AVISWJFIXS2",
@@ -217,14 +210,12 @@ aktivasi_voucher_internet = [
     "ACFRE25",
     "ACFRE35",
     "IV1U",
-    
     # inject voucher byu
     "UVBYU11",
     "UVBYU21",
     "UVBYU33",
     "UVBYU47",
-    
-    # (3 hari)    
+    # (3 hari)
     "UVBYU7",
     "UVBYU9",
     "UVBYU14",
@@ -233,7 +224,6 @@ aktivasi_voucher_internet = [
     # (7 hari)
     "AVBYU6G7H",
     "AVBY8G7H",
-    
     # Inject Tri
     # (1 hari)
     "ZHW1GB1",
@@ -298,7 +288,6 @@ topup_game = [
     "FFP600",
     "FFP635",
     "FFP720",
-    
     # mobile legend
     "DMLL3",
     "DMLL5",

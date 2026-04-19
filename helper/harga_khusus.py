@@ -19,11 +19,13 @@ HARGA_KHUSUS = {
         "ZHW3GB3",
         "VXLMF5G3H",
         "MGX1",
+        "DTRJAB43",
     ],
     16000: [
         "UVAM6GB3-PR",
         "AVBY6G3H",
         "TDJBM1C",
+        "DTRJABN4G5",
     ],
     17000: [
         "IVXBP2K7",

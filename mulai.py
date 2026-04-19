@@ -264,6 +264,8 @@ def scrap_from_url(source_urls, product):
                         else konversi_harga(kode, harga)
                     )
                     order = row.select_one("td:nth-child(4)").text.strip()
+                    if order == "KOSONG":
+                        continue
                     aktif = True if kode in list_aktif_now else False
 
                     # Ambil link dari elemen <a>
