@@ -23,11 +23,18 @@ paket_internet_urls = [
         "provider": "telkomsel",
         "urls": [
             # paket kuota
+            "https://isipulsa.web.id/harga/paket-kuota/telkomsel-10",
+            "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-m-kios",
             "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jawa-barat",
             
             # Paket Kuota Telkomsel (Kuota Lokal - Jabotabek dan Jawa Barat)
             "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jabotabek-dan-jawa-barat",
             
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=2",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=3",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=4",
+            "https://isipulsa.web.id/harga/paket-internet/telkomsel-tanpa-pembagian",
             "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash",
             "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash?page=2",
             "https://isipulsa.web.id/harga/paket-internet/telkomsel-tsel-flash?page=3",

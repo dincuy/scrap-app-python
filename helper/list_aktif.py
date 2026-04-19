@@ -1,6 +1,7 @@
 paket_internet = [
     # paket internet telkomsel
     # (1 hari)
+    "SDJB4G1",
     "TSELMINI11",
     "DTRJAB51",
     # 2 hari
@@ -43,7 +44,6 @@ paket_internet = [
     "MGB800",
     "MGB1",
     "MGB4",
-    "MGB5",
     # (5 hari)
     "MGX1",
     "MG2SKSH",
