@@ -204,6 +204,7 @@ aktivasi_voucher_internet = [
     # (7 hari)
     "IVXBP2K7",
     "AXLBB3K7",
+    "UVXFM10G7",
     
     # inject voucher indosat
     # (1 hari)

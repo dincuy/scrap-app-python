@@ -25,11 +25,6 @@ paket_internet_urls = [
             # paket kuota
             "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jawa-barat",
             
-            # Paket Internet Telkomsel (Kuota Mini)
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=2",
-            "https://isipulsa.web.id/harga/paket-internet/telkomsel-kuota-mini?page=3",
-            
             # Paket Kuota Telkomsel (Kuota Lokal - Jabotabek dan Jawa Barat)
             "https://isipulsa.web.id/harga/paket-kuota/telkomsel-kuota-lokal-jabotabek-dan-jawa-barat",
             
