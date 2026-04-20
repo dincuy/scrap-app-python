@@ -42,12 +42,14 @@ HARGA_KHUSUS = {
     ],
     20000: [
         "AVTRWJH5G5H",
+        "THNMD6",
     ],
     21000: [
         "AVBY8G7H",
     ],
     22000: [
         "VXCFM5G14H",
+        "TRHWE5",
     ],
     23000: [
         "TFLASHK3",

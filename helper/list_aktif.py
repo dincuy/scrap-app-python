@@ -101,30 +101,19 @@ paket_internet = [
     "ISPURE3",
     # paket internet byu
     # 3 hari
-    "DBYUJ4G3H",
-    "DBY50502",
-    "DBY50501",
-    "PBS003M",
-    "DBY50921",
-    "BYDBL14",
-    "DBBY19",
-    "DBBY21",
-    "PDBY50956",
+    "DBYU6G3",
     # 5 hari
     "PBN8H5",
     "DBYUJ7G5H",
     # 7 hari
-    "DBY50779",
-    "PBN8H9",
+    "DBYU4G7",
     "PBS6GB7H",
     # 14 hari
     "BYUDSK11G1",
     # 30 hari
-    "BYUM51587",
+    "PBN8F4",
+    "PBS007B",
     "BYUB10",
-    "BYUM51589",
-    "BYUB15",
-    "BYUM51591",
     # paket internet three
     # 1 hari
     "TPHY21",
@@ -154,12 +143,15 @@ paket_internet = [
     "TRP10",
     "TRP15",
     # paket internet smartfren
+    # 1 hari
+    "SMDN10H1",
     # 3 hari
     "SMNI13",
     "SLK4G3",
     # 5 hari
     "SMNI35",
     # 7 hari
+    "SUN107",
     "SMDTL10A",
     "SLK6G7",
     # 14 hari
