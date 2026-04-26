@@ -22,10 +22,10 @@ HARGA_KHUSUS = {
         "DTRJAB43",
     ],
     16000: [
-        "UVAM6GB3-PR",
         "AVBY6G3H",
         "TDJBM1C",
         "DTRJABN4G5",
+        "IVTSDJB4H5",
     ],
     17000: [
         "IVXBP2K7",

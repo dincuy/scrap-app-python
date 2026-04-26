@@ -39,7 +39,6 @@ data_aktivasi_voucher = [
         "aktif": True,
         "link": "",
     },
-    
     # axis
     {
         "kode": "UVAM1C-PR",
@@ -62,12 +61,24 @@ data_aktivasi_voucher = [
         "produk": "Inject Voucher - Akt. Voucher AIGO 8.5GB + Kuota Di Kotamu / 3 hari",
         "desc": "prasticareload.com",
         "harga": 12925,
-        "hargaJual": 15000,
+        "hargaJual": 16000,
         "order": "ORDER",
         "aktif": True,
         "link": "",
     },
-    
+    {
+        "kode": "UVAM2-PR",
+        "provider": "axis",
+        "jenisPaket": "UNLOCK VOC AXIS DATA MINI",
+        "kategori": "aktivasi voucher internet",
+        "produk": "Inject Voucher - Akt. Voucher AIGO 10GB / 7 hari",
+        "desc": "prasticareload.com",
+        "harga": 22495,
+        "hargaJual": 26000,
+        "order": "ORDER",
+        "aktif": True,
+        "link": "",
+    },
     # xl
     {
         "kode": "UVXFM4G3-PR",
