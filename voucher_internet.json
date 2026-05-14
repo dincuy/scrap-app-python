@@ -1,209 +1,4 @@
-data_data_voucher_internet = [
-    # telkomsel
-    # 1 hari
-    {
-        "kode": "TVJBR5G1-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - 1GB Reg + 3GB Lokal Jabar / 1 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 7950,
-        "hargaJual": 10000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    # 2 hari
-    {
-        "kode": "TVJBR5G2-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 6GB / 2 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 10925,
-        "hargaJual": 13000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    # 3 hari
-    {
-        "kode": "TVJBR0-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher 0.5GB Reg + 1GB Lokal Jabar / 3 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 9525,
-        "hargaJual": 11000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "TVJBR1C-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 5GB / 3 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 13525,
-        "hargaJual": 16000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    # 5 hari
-    {
-        "kode": "TVJBR1A-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher 1GB Reg + 1,5GB Lokal Jabar / 5 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 13225,
-        "hargaJual": 15000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "TVJBR2C-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher 0,5GB Reg + 2.5GB Lokal Jabar / 5 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 13475,
-        "hargaJual": 16000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    # 7 hari
-    {
-        "kode": "TVJBR1B-PR",
-        "provider": "telkomsel",
-        "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 5GB / 7 Hari",
-        "desc": "VOC TELKOMSEL DATA JAWA BARAT",
-        "harga": 19875,
-        "hargaJual": 22000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    # axis
-    {
-        "kode": "VAM300-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 5GB Reg + / 1 Hari",
-        "desc": "prasticareload.com",
-        "harga": 6985,
-        "hargaJual": 8000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAM1-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 3GB Reg + / 3 Hari",
-        "desc": "prasticareload.com",
-        "harga": 9975,
-        "hargaJual": 13000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAM2-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 5GB Reg + / 3 Hari",
-        "desc": "prasticareload.com",
-        "harga": 11375,
-        "hargaJual": 14000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAM2A-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 5GB Reg + / 5 Hari",
-        "desc": "prasticareload.com",
-        "harga": 14825,
-        "hargaJual": 17000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAMS1-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 10GB Reg + / 7 Hari",
-        "desc": "prasticareload.com",
-        "harga": 23020,
-        "hargaJual": 26000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAMS2-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 17GB Reg + / 7 Hari",
-        "desc": "prasticareload.com",
-        "harga": 28625,
-        "hargaJual": 32000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAM5G14-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 5GB Reg + / 14 Hari",
-        "desc": "prasticareload.com",
-        "harga": 22125,
-        "hargaJual": 25000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-    {
-        "kode": "VAMS1A-PR",
-        "provider": "axis",
-        "jenisPaket": "VOC AXIS DATA MINI",
-        "kategori": "voucher internet",
-        "produk": "Voucher Internet - Voucher Kuota 8GB Reg + / 14 Hari",
-        "desc": "prasticareload.com",
-        "harga": 27425,
-        "hargaJual": 31000,
-        "order": "ORDER",
-        "aktif": True,
-        "link": "",
-    },
-]
-
-data_voucher_internet = [
+[
     {
         "kode": "TVJBR5G1-PR",
         "jenisPaket": "VOC TELKOMSEL DATA JAWA BARAT",
@@ -214,8 +9,8 @@ data_voucher_internet = [
         "harga": 7950,
         "hargaJual": 10000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR5G2-PR",
@@ -227,8 +22,8 @@ data_voucher_internet = [
         "harga": 10975,
         "hargaJual": 13000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR0-PR",
@@ -240,8 +35,8 @@ data_voucher_internet = [
         "harga": 9525,
         "hargaJual": 12000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR1C-PR",
@@ -253,8 +48,8 @@ data_voucher_internet = [
         "harga": 13525,
         "hargaJual": 16000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR1A-PR",
@@ -266,8 +61,8 @@ data_voucher_internet = [
         "harga": 13225,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR2C-PR",
@@ -279,8 +74,8 @@ data_voucher_internet = [
         "harga": 13475,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR2A-PR",
@@ -292,8 +87,8 @@ data_voucher_internet = [
         "harga": 19575,
         "hargaJual": 22000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR2B-PR",
@@ -305,8 +100,8 @@ data_voucher_internet = [
         "harga": 23275,
         "hargaJual": 26000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR1B-PR",
@@ -318,8 +113,8 @@ data_voucher_internet = [
         "harga": 20250,
         "hargaJual": 22000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR7G7-PR",
@@ -331,8 +126,8 @@ data_voucher_internet = [
         "harga": 23525,
         "hargaJual": 27000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR3A-PR",
@@ -344,8 +139,8 @@ data_voucher_internet = [
         "harga": 27425,
         "hargaJual": 30000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR3B-PR",
@@ -357,8 +152,8 @@ data_voucher_internet = [
         "harga": 28050,
         "hargaJual": 31000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR3-PR",
@@ -370,8 +165,8 @@ data_voucher_internet = [
         "harga": 34275,
         "hargaJual": 37000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR6-PR",
@@ -383,8 +178,8 @@ data_voucher_internet = [
         "harga": 66525,
         "hargaJual": 70000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "TVJBR9-PR",
@@ -396,8 +191,8 @@ data_voucher_internet = [
         "harga": 77775,
         "hargaJual": 81000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM1B-PR",
@@ -409,8 +204,8 @@ data_voucher_internet = [
         "harga": 6425,
         "hargaJual": 7000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM2C-PR",
@@ -422,8 +217,8 @@ data_voucher_internet = [
         "harga": 8675,
         "hargaJual": 11000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM2GB2-PR",
@@ -435,8 +230,8 @@ data_voucher_internet = [
         "harga": 8420,
         "hargaJual": 10000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM5GB2-PR",
@@ -448,8 +243,8 @@ data_voucher_internet = [
         "harga": 8425,
         "hargaJual": 10000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM8G2-PR",
@@ -461,8 +256,8 @@ data_voucher_internet = [
         "harga": 11825,
         "hargaJual": 14000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM13G2-PR",
@@ -474,8 +269,8 @@ data_voucher_internet = [
         "harga": 13275,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM1C-PR",
@@ -487,8 +282,8 @@ data_voucher_internet = [
         "harga": 9375,
         "hargaJual": 11000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM2A-PR",
@@ -500,8 +295,8 @@ data_voucher_internet = [
         "harga": 10850,
         "hargaJual": 13000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM6GB3-PR",
@@ -513,8 +308,8 @@ data_voucher_internet = [
         "harga": 12925,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM6-PR",
@@ -526,8 +321,8 @@ data_voucher_internet = [
         "harga": 15725,
         "hargaJual": 18000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM17G3-PR",
@@ -539,8 +334,8 @@ data_voucher_internet = [
         "harga": 18125,
         "hargaJual": 20000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM15GB3-PR",
@@ -552,8 +347,8 @@ data_voucher_internet = [
         "harga": 21950,
         "hargaJual": 25000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM2GB5-PR",
@@ -565,8 +360,8 @@ data_voucher_internet = [
         "harga": 13225,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM1-PR",
@@ -578,8 +373,8 @@ data_voucher_internet = [
         "harga": 12575,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM1A-PR",
@@ -591,8 +386,8 @@ data_voucher_internet = [
         "harga": 12575,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM8G5-PR",
@@ -604,8 +399,8 @@ data_voucher_internet = [
         "harga": 16650,
         "hargaJual": 19000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAMS2A-PR",
@@ -617,8 +412,8 @@ data_voucher_internet = [
         "harga": 14300,
         "hargaJual": 16000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM3A-PR",
@@ -630,8 +425,8 @@ data_voucher_internet = [
         "harga": 22425,
         "hargaJual": 25000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM5A-PR",
@@ -643,8 +438,8 @@ data_voucher_internet = [
         "harga": 26825,
         "hargaJual": 30000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM32G5-PR",
@@ -656,8 +451,8 @@ data_voucher_internet = [
         "harga": 33125,
         "hargaJual": 36000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM50G5-PR",
@@ -669,8 +464,8 @@ data_voucher_internet = [
         "harga": 36075,
         "hargaJual": 39000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM1E-PR",
@@ -682,8 +477,8 @@ data_voucher_internet = [
         "harga": 13275,
         "hargaJual": 15000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM4G7-PR",
@@ -695,8 +490,8 @@ data_voucher_internet = [
         "harga": 16125,
         "hargaJual": 18000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM6G7-PR",
@@ -708,8 +503,8 @@ data_voucher_internet = [
         "harga": 17625,
         "hargaJual": 20000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM2-PR",
@@ -721,8 +516,8 @@ data_voucher_internet = [
         "harga": 22520,
         "hargaJual": 26000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM4-PR",
@@ -734,8 +529,8 @@ data_voucher_internet = [
         "harga": 27925,
         "hargaJual": 31000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM6A-PR",
@@ -747,8 +542,8 @@ data_voucher_internet = [
         "harga": 31675,
         "hargaJual": 35000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM24GB7-PR",
@@ -760,8 +555,8 @@ data_voucher_internet = [
         "harga": 42910,
         "hargaJual": 46000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM3G14-PR",
@@ -773,8 +568,8 @@ data_voucher_internet = [
         "harga": 17625,
         "hargaJual": 20000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM5G14-PR",
@@ -786,8 +581,8 @@ data_voucher_internet = [
         "harga": 21575,
         "hargaJual": 25000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM3-PR",
@@ -799,8 +594,8 @@ data_voucher_internet = [
         "harga": 26850,
         "hargaJual": 30000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM15G14-PR",
@@ -812,8 +607,8 @@ data_voucher_internet = [
         "harga": 36075,
         "hargaJual": 39000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM5-PR",
@@ -825,8 +620,8 @@ data_voucher_internet = [
         "harga": 44825,
         "hargaJual": 48000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM30-PR",
@@ -838,8 +633,8 @@ data_voucher_internet = [
         "harga": 55675,
         "hargaJual": 59000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
+        "aktif": false,
+        "link": ""
     },
     {
         "kode": "UVAM1D-PR",
@@ -851,7 +646,7 @@ data_voucher_internet = [
         "harga": 10850,
         "hargaJual": 13000,
         "order": "ORDER",
-        "aktif": False,
-        "link": "",
-    },
+        "aktif": false,
+        "link": ""
+    }
 ]
