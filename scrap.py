@@ -4,12 +4,13 @@ import json
 import re
 import sys
 
+# Folder output
+OUTPUT_FOLDER = "manual_data"
 # Folder tempat HTML
 FOLDER_HTML = "html"
 
 
 def parse_harga(text):
-    # contoh: "7.950" -> 7950
     return int(text.replace(".", "").replace(",", "").strip())
 
 
@@ -37,9 +38,6 @@ def harga_jual(harga):
 
 
 def format_produk(keterangan):
-    # Contoh:
-    # "Voucher 1GB Reg + 3GB Lokal Jabar - 1Hari"
-    # -> "Voucher Internet - 1GB Reg + 3GB Lokal Jabar / 1 Hari"
     if " - " in keterangan:
         isi, durasi = keterangan.rsplit(" - ", 1)
     else:
@@ -73,7 +71,14 @@ def get_provider(judul):
         return "unknown"
 
 
-# Ambil semua file html
+def buat_nama_variabel(kategori):
+    nama = kategori.lower().strip()
+    nama = re.sub(r"[^\w\s]", "", nama)
+    nama = re.sub(r"\s+", "_", nama)
+    return f"data_{nama}"
+
+
+# Validasi folder
 if not os.path.isdir(FOLDER_HTML):
     print(f"Folder '{FOLDER_HTML}' tidak ditemukan")
     sys.exit(1)
@@ -84,12 +89,11 @@ if not files:
     print("Tidak ada file HTML")
     sys.exit(1)
 
-# Tampilkan pilihan
+# Pilih file
 print("Pilih file HTML:")
 for i, file in enumerate(files, start=1):
     print(f"{i}. {file}")
 
-# Input user
 try:
     pilihan = int(input("Masukkan nomor: ")) - 1
 except ValueError:
@@ -111,7 +115,6 @@ soup = BeautifulSoup(html, "html.parser")
 
 data = []
 
-# Proses setiap tabel satu per satu
 tables = soup.select("table.tabel")
 
 if not tables:
@@ -142,8 +145,8 @@ for table in tables:
 
         item = {
             "kode": f"{kode}-PR",
-            "jenisPaket": jenis_paket,
             "provider": provider,
+            "jenisPaket": jenis_paket,
             "kategori": "voucher internet",
             "produk": format_produk(keterangan),
             "desc": jenis_paket,
@@ -154,13 +157,21 @@ for table in tables:
             "link": "",
         }
 
-        print(item["provider"])
         data.append(item)
 
-# Nama file output mengikuti file input
-output_file = file_terpilih.replace(".html", ".json")
+# Tentukan nama variabel dari kategori
+kategori = data[0]["kategori"] if data else "data"
+nama_variabel = buat_nama_variabel(kategori)
+
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+
+# Simpan ke file .py
+nama_file = file_terpilih.replace(".html", ".py")
+output_file = os.path.join(OUTPUT_FOLDER, nama_file)
 
 with open(output_file, "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=4)
+    f.write(f"{nama_variabel} = ")
+    f.write(repr(data))
 
 print(f"Selesai! Data disimpan ke {output_file}")
+print(f"Nama variabel: {nama_variabel}")
