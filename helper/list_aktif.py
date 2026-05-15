@@ -238,11 +238,8 @@ voucher_internet = [
     "VDF5G2",
     # (3 hari)
     "VJABAR153",
-    "VJBR33",
     # (5 hari)
     "VJABAR255",
-    "VJBR35",
-    "VTSJBRMI5",
     # (7 hari)
     "VJABAR357",
     "TVJBR3A",
