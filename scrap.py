@@ -1,13 +1,64 @@
 import os
 from bs4 import BeautifulSoup
-import json
 import re
 import sys
+import requests
+import threading
+import time
+
+loading = True
+
+
+def animasi_loading():
+    chars = "|/-\\"
+    i = 0
+    while loading:
+        print(f"\rMengambil data... {chars[i % len(chars)]}", end="", flush=True)
+        time.sleep(0.1)
+        i += 1
+
 
 # Folder output
 OUTPUT_FOLDER = "manual_data"
-# Folder tempat HTML
-FOLDER_HTML = "html"
+
+# Target Paket
+TARGET_PAKET = {"VOC TELKOMSEL DATA JAWA BARAT", "VOC AXIS DATA MINI"}
+
+# daftar kode
+KODE_DIPILIH = {
+    # telkomsel
+    "TVJBR5G1",
+    "TVJBR5G2",
+    "TVJBR1C",
+    "TVJBR2B",
+    "TVJBR1B",
+    "TVJBR7G7",
+    # axis
+    "VAM1",
+    "VAM2",
+    "VAM3",
+    "VAM1C",
+    "VAM2A",
+    "VAM3A",
+    "VAM1D",
+    "VAMS1",
+    "VAMS2",
+    "VAM5G14",
+    "VAMS1A",
+    # xl
+    "VXDFM3G3H",
+    "VXDFM6G3H",
+    # indosat
+    "VIDFHWJ1G1",
+    "VIDFHN5H3",
+    "VIDFHWJ5G3",
+    "VIDFHWJ3G5",
+    "VIDFHWJ6G5",
+    "VIDFHWJ5G5",
+    "VIDFHWJ7G7",
+    "VIDFHWJ7",
+    "VIDFHWJ10",
+}
 
 
 def parse_harga(text):
@@ -71,6 +122,15 @@ def get_provider(judul):
         return "unknown"
 
 
+def get_kategori(jenis_paket):
+    jp = jenis_paket.lower()
+    if jp.startswith("voc"):
+        return "voucher internet"
+    elif jp.startswith("unlock"):
+        return "aktivasi voucher internet"
+    return "lainnya"
+
+
 def buat_nama_variabel(kategori):
     nama = kategori.lower().strip()
     nama = re.sub(r"[^\w\s]", "", nama)
@@ -78,39 +138,30 @@ def buat_nama_variabel(kategori):
     return f"data_{nama}"
 
 
-# Validasi folder
-if not os.path.isdir(FOLDER_HTML):
-    print(f"Folder '{FOLDER_HTML}' tidak ditemukan")
+# =========================
+# SCRAP DARI URL
+# =========================
+
+url = "https://prasticareload.webreport.info/harga.js.php?id=f483f4d60dc9d284bd4c6cb50b016284e025ac0fbb5fcc29a58dff035d775b398d163fd12c65d8751d008d645791730ce0e3-86"
+
+headers = {"User-Agent": "Mozilla/5.0"}
+
+# mulai loading
+t = threading.Thread(target=animasi_loading)
+t.start()
+
+response = requests.get(url, headers=headers)
+
+# stop loading
+loading = False
+t.join()
+print("\rMengambil data... selesai!     ")
+
+if response.status_code != 200:
+    print("Gagal mengambil data dari URL")
     sys.exit(1)
 
-files = sorted([f for f in os.listdir(FOLDER_HTML) if f.endswith(".html")])
-
-if not files:
-    print("Tidak ada file HTML")
-    sys.exit(1)
-
-# Pilih file
-print("Pilih file HTML:")
-for i, file in enumerate(files, start=1):
-    print(f"{i}. {file}")
-
-try:
-    pilihan = int(input("Masukkan nomor: ")) - 1
-except ValueError:
-    print("Input harus angka")
-    sys.exit(1)
-
-if pilihan < 0 or pilihan >= len(files):
-    print("Pilihan tidak valid")
-    sys.exit(1)
-
-file_terpilih = files[pilihan]
-path_file = os.path.join(FOLDER_HTML, file_terpilih)
-
-# Baca HTML
-with open(path_file, "r", encoding="utf-8") as f:
-    html = f.read()
-
+html = response.text
 soup = BeautifulSoup(html, "html.parser")
 
 data = []
@@ -118,7 +169,7 @@ data = []
 tables = soup.select("table.tabel")
 
 if not tables:
-    print("Tidak ada tabel class='tabel' yang ditemukan")
+    print("Tidak ada tabel ditemukan")
     sys.exit(1)
 
 for table in tables:
@@ -127,27 +178,44 @@ for table in tables:
         continue
 
     jenis_paket = head.get_text(" ", strip=True)
+
+    # FILTER JENIS PAKET
+    if jenis_paket not in TARGET_PAKET:
+        continue
+
     provider = get_provider(jenis_paket)
+    kategori = get_kategori(jenis_paket)
 
     rows = table.select("tr.td1, tr.td2")
+
     for row in rows:
         cols = row.find_all("td")
         if len(cols) < 4:
             continue
 
         kode = cols[0].get_text(strip=True)
+
+        # FILTER KODE
+        if kode not in KODE_DIPILIH:
+            continue
+
         keterangan = cols[1].get_text(" ", strip=True)
         harga_text = cols[2].get_text(strip=True)
         status = cols[3].get_text(" ", strip=True)
 
         harga = parse_harga(harga_text)
+
+        # FILTER HARGA
+        if harga > 70000:
+            continue
+
         is_open = status.lower() == "open"
 
         item = {
             "kode": f"{kode}-PR",
             "provider": provider,
             "jenisPaket": jenis_paket,
-            "kategori": "voucher internet",
+            "kategori": kategori,
             "produk": format_produk(keterangan),
             "desc": jenis_paket,
             "harga": harga,
@@ -159,19 +227,28 @@ for table in tables:
 
         data.append(item)
 
-# Tentukan nama variabel dari kategori
-kategori = data[0]["kategori"] if data else "data"
+# =========================
+# SIMPAN FILE
+# =========================
+
+if not data:
+    print("Tidak ada data ditemukan")
+    sys.exit(0)
+
+kategori = data[0]["kategori"]
 nama_variabel = buat_nama_variabel(kategori)
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-# Simpan ke file .py
-nama_file = file_terpilih.replace(".html", ".py")
-output_file = os.path.join(OUTPUT_FOLDER, nama_file)
+nama_file = kategori.lower().strip()
+nama_file = re.sub(r"[^\w\s]", "", nama_file)
+nama_file = re.sub(r"\s+", "_", nama_file)
+
+output_file = os.path.join(OUTPUT_FOLDER, f"{nama_file}.py")
 
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(f"{nama_variabel} = ")
     f.write(repr(data))
 
 print(f"Selesai! Data disimpan ke {output_file}")
-print(f"Nama variabel: {nama_variabel}")
+print(f"Jumlah data: {len(data)}")
