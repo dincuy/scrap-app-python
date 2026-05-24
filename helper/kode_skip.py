@@ -76,4 +76,27 @@ KODE_SKIP = {
     "VIDWJ5SB",
     "VIDFIWJ24",
     # voc smartfren
+    # aktivasi voucher
+    # telkomsel
+    # 3 hari
+    "SDZ1",
+    "SDZ3",
+    # 5 hari
+    "UVTJBR4A",
+    "SDZ4",
+    "UVTJBR5",
+    "CAM1",
+    # axis
+    # 1 hari
+    "IVXBP2K1",
+    "AXLBB3K1",
+    "IVXBP5K1",
+    # 2 hari
+    "AVXBP5K2H",
+    # xl
+    # 3 hari
+    "IVXBP2K3",
+    "AXLMF5G3H",
+    # 7 hari
+    "AXLBB3K7",
 }
