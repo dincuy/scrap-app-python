@@ -6,6 +6,8 @@ import requests
 import threading
 import time
 
+# from scrap_help import KODE_DIPILIH
+
 loading = True
 
 
@@ -22,42 +24,14 @@ def animasi_loading():
 OUTPUT_FOLDER = "manual_data"
 
 # Target Paket
-TARGET_PAKET = {"VOC TELKOMSEL DATA JAWA BARAT", "VOC AXIS DATA MINI"}
+TARGET_PAKET = {
+    "VOC TELKOMSEL DATA JAWA BARAT",
+    "VOC AXIS DATA MINI",
+    "VOC XL FLEX MINI",
+}
 
-# daftar kode
-KODE_DIPILIH = {
-    # telkomsel
+PRODUK_AKTIF = {
     "TVJBR5G1",
-    "TVJBR5G2",
-    "TVJBR1C",
-    "TVJBR2B",
-    "TVJBR1B",
-    "TVJBR7G7",
-    # axis
-    "VAM1",
-    "VAM2",
-    "VAM3",
-    "VAM1C",
-    "VAM2A",
-    "VAM3A",
-    "VAM1D",
-    "VAMS1",
-    "VAMS2",
-    "VAM5G14",
-    "VAMS1A",
-    # xl
-    "VXDFM3G3H",
-    "VXDFM6G3H",
-    # indosat
-    "VIDFHWJ1G1",
-    "VIDFHN5H3",
-    "VIDFHWJ5G3",
-    "VIDFHWJ3G5",
-    "VIDFHWJ6G5",
-    "VIDFHWJ5G5",
-    "VIDFHWJ7G7",
-    "VIDFHWJ7",
-    "VIDFHWJ10",
 }
 
 
@@ -143,16 +117,14 @@ def buat_nama_variabel(kategori):
 # =========================
 
 url = "https://prasticareload.webreport.info/harga.js.php?id=f483f4d60dc9d284bd4c6cb50b016284e025ac0fbb5fcc29a58dff035d775b398d163fd12c65d8751d008d645791730ce0e3-86"
-
 headers = {"User-Agent": "Mozilla/5.0"}
 
-# mulai loading
+# loading animasi
 t = threading.Thread(target=animasi_loading)
 t.start()
 
 response = requests.get(url, headers=headers)
 
-# stop loading
 loading = False
 t.join()
 print("\rMengambil data... selesai!     ")
@@ -161,10 +133,10 @@ if response.status_code != 200:
     print("Gagal mengambil data dari URL")
     sys.exit(1)
 
-html = response.text
-soup = BeautifulSoup(html, "html.parser")
+soup = BeautifulSoup(response.text, "html.parser")
 
 data = []
+seen = set()  # ✅ untuk deduplikasi
 
 tables = soup.select("table.tabel")
 
@@ -179,7 +151,6 @@ for table in tables:
 
     jenis_paket = head.get_text(" ", strip=True)
 
-    # FILTER JENIS PAKET
     if jenis_paket not in TARGET_PAKET:
         continue
 
@@ -190,14 +161,18 @@ for table in tables:
 
     for row in rows:
         cols = row.find_all("td")
+
+        # ✅ skip row kosong / tidak valid
         if len(cols) < 4:
             continue
 
         kode = cols[0].get_text(strip=True)
-
-        # FILTER KODE
-        if kode not in KODE_DIPILIH:
+        if not kode:
             continue
+
+        # filter kode
+        # if kode not in KODE_DIPILIH:
+        #     continue
 
         keterangan = cols[1].get_text(" ", strip=True)
         harga_text = cols[2].get_text(strip=True)
@@ -205,9 +180,15 @@ for table in tables:
 
         harga = parse_harga(harga_text)
 
-        # FILTER HARGA
+        # filter harga
         if harga > 70000:
             continue
+
+        # ✅ deduplikasi
+        key = (kode, keterangan, harga)
+        if key in seen:
+            continue
+        seen.add(key)
 
         is_open = status.lower() == "open"
 
@@ -221,7 +202,7 @@ for table in tables:
             "harga": harga,
             "hargaJual": harga_jual(harga),
             "order": "ORDER" if is_open else "",
-            "aktif": False,
+            "aktif": True if kode in PRODUK_AKTIF else False,
             "link": "",
         }
 

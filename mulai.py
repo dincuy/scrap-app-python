@@ -14,11 +14,12 @@ from helper.list_aktif import (
     topup_game,
 )
 from helper.harga_khusus import HARGA_KHUSUS
+from helper.kode_skip import KODE_SKIP
 
 # import manual data
-from manual_data.paket_internet import data_paket_internet
-from manual_data.aktivasi_voucher import data_aktivasi_voucher
-from manual_data.voucher_internet import data_voucher_internet
+# from manual_data.paket_internet import data_paket_internet
+# from manual_data.aktivasi_voucher import data_aktivasi_voucher
+# from manual_data.voucher_internet import data_voucher_internet
 
 
 def hapus_rp(nominal):
@@ -151,98 +152,22 @@ def hapus_data_paket_by_kategori(kategori):
 
 
 # Fungsi untuk ambil data manual
-def get_manual_data(product):
-    current_time = datetime.now().isoformat()
+# def get_manual_data(product):
+#     current_time = datetime.now().isoformat()
 
-    mapping = {
-        "paket-internet": data_paket_internet,
-        "aktivasi-voucher-internet": data_aktivasi_voucher,
-        "voucher-internet": data_voucher_internet,
-    }
+#     mapping = {
+#         "paket-internet": data_paket_internet,
+#         "aktivasi-voucher-internet": data_aktivasi_voucher,
+#         "voucher-internet": data_voucher_internet,
+#     }
 
-    manual_list = mapping.get(product, [])
+#     manual_list = mapping.get(product, [])
 
-    # Tambahkan field dibuatPada
-    for item in manual_list:
-        item["dibuatPada"] = current_time
+#     # Tambahkan field dibuatPada
+#     for item in manual_list:
+#         item["dibuatPada"] = current_time
 
-    return manual_list
-
-
-KODE_SKIP = {
-    # voc telkomsel
-    # 1 hari
-    "VTSDJBR4H1",
-    # 7 hari
-    "TVJBR3B",
-    "TVJBR3C",
-    # "TFLASHK4",
-    "VJBR33",
-    "VJBR35",
-    "VTSJBRMI5",
-    # voc axis
-    # 2 hari
-    "VAXSS15",
-    # 3 hari
-    "VAX1SH3",
-    "VAX5H3",
-    "VAB12",
-    # 5 hari
-    "VABMI3",
-    "VAX4H5",
-    "VAX7H5",
-    "VAX35G5H",
-    "VAX50G5H",
-    # 7 hari
-    "VAX3H7",
-    "VAX4SH7",
-    # voc xl
-    # 1 hari
-    "VXBPXS1",
-    "VXBPXS2",
-    "VXLMF4G1H",
-    # 2 hari
-    "VXFH15G2H",
-    # 3 hari
-    "VXBPSM1",
-    "VXDFM20G3H",
-    # 7 hari
-    "VXBPWE17",
-    "VXDFM40G7H",
-    "VXDFM75G7H",
-    # 10 hari
-    "VXBPTN3",
-    "VXBPTN23",
-    "VXBPTN7",
-    # 14 hari
-    "VXLMF17G14",
-    "VXDFM30G",
-    # 15 hari
-    "VXBPHM5",
-    "VXBPHM11",
-    # indosat
-    # 5 hari
-    "VISWJFIMI3",
-    "VISWJFIMI5",
-    # 7 hari
-    "VIDFHN7",
-    # 28 hari
-    "VIDWJ9B",
-    # voc byu
-    # 1 hari
-    "VBYXS10",
-    # 3 hari
-    "VBYUH2",
-    # 7 hari
-    "VBYUH5",
-    # voc tri
-    # 1 hari
-    "VTHJB151",
-    # 5 hari
-    "VTHJB355",
-    # 7 hari
-    "VTHCWJ97",
-}
+#     return manual_list
 
 
 # Fungsi untuk melakukan scraping data
@@ -380,10 +305,10 @@ def scrap_from_url(source_urls, product):
             time.sleep(0.1)  # Optional: Untuk simulasi loading
 
     # Ambil data manual
-    manual_data = get_manual_data(product)
+    # manual_data = get_manual_data(product)
 
     # Gabungkan
-    data.extend(manual_data)
+    # data.extend(manual_data)
 
     # Cek dan tampilkan duplikasi jika ada
     if duplicates:
