@@ -15,6 +15,7 @@ HARGA_KHUSUS = {
         "AVTRWJH5G2H",
         "CAXSS7",
         "AVXFH8G2H",
+        "AVISWJFISS5",
     ],
     14000: [
         "AXLBB3K3",
@@ -34,6 +35,8 @@ HARGA_KHUSUS = {
         "IVTSDJB5H3",
         "CAXSS15",
         "AVXFH15G2H",
+        "IVTSDJB7H2",
+        "CAB4",
     ],
     17000: [
         "IVXBP2K7",

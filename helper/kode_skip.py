@@ -99,4 +99,29 @@ KODE_SKIP = {
     "AXLMF5G3H",
     # 7 hari
     "AXLBB3K7",
+    # paket intenet
+    # telkomsel
+    # 1 hari
+    "TSELRGM500",
+    "TDSL1",
+    "TDSL3",
+    "TDSLUN",
+    "TSELMINI351",
+    "TSELMINT31",
+    "TSDJBRXS4",
+    # 2 hari
+    "TSDJBRSS5",
+    "TSDJBRSS7",
+    # 3 hari
+    "OSDH5003H",
+    "DTRJAB13S",
+    "TSELMINL13",
+    "TDKM1",
+    "TSELMN153",
+    "TDKM2",
+    "DTTTBR357",
+    "TMS253",
+    "SDJB3G3",
+    "TDJBM1C",
+    "TDJBM1",
 }

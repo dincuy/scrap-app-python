@@ -8,7 +8,6 @@ paket_internet = [
     "DTRJABN6G2",
     # (3 hari)
     "SDJB2G3",
-    "SDJB3G3",
     "DTRJAB43",
     "TDJBM1C",
     # (5 hari)
@@ -166,11 +165,15 @@ paket_internet = [
 
 aktivasi_voucher_internet = [
     # inject voucher telkomsel
+    # 1 hari
+    "IVTSDJB4H1",
     # (3 hari)
+    "IVTSDJB5H3",
     # (5 hari)
     "UVTJBR2",
     "IVTSDJB4H5",
     # (7 hari)
+    "SDZ10",
     # inject voucher axis
     # (1 hari)
     "CAXXS1",
