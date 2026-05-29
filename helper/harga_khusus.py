@@ -7,6 +7,7 @@ HARGA_KHUSUS = {
     ],
     9000: [
         "AVTRWJH4G1H",
+        "AXLMF4G1H",
     ],
     11000: [
         "CAXSS5",
@@ -37,9 +38,9 @@ HARGA_KHUSUS = {
         "AVXFH15G2H",
         "IVTSDJB7H2",
         "CAB4",
+        "IVXBP2K7",
     ],
     17000: [
-        "IVXBP2K7",
         "MG2SKSH",
         "DXBP5K3",
         "CAD2",
@@ -52,6 +53,8 @@ HARGA_KHUSUS = {
         "TSELFLMT27",
         "VXLMF5G7H",
         "IVTSDJB7H3",
+        "IVXBP5K3",
+        "AXLMF5G7H",
     ],
     20000: [
         "AVTRWJH5G5H",
@@ -60,6 +63,7 @@ HARGA_KHUSUS = {
     21000: [
         "AVBY8G7H",
         "UVTJBR3",
+        "AVXFH7G7HR",
     ],
     22000: [
         "VXCFM5G14H",
