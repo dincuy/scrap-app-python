@@ -174,51 +174,53 @@ aktivasi_voucher_internet = [
     "IVTSDJB4H5",
     # (7 hari)
     "SDZ10",
+    # -------------
     # inject voucher axis
     # (1 hari)
     "CAXXS1",
+    # (2 hari)
+    "CAXSS5",
+    # (3 hari)
+    "CAB800",
+    "CAB1",
     # (5 hari)
     "AVZMINI1",
     # (7 hari)
-    "AVZMINI2",
+    "IVAXDH3H7",
+    "AVAX9G7H",
     # inject voucher xl
     # (1 hari)
     "AXLMF4G1H",
     # (3 hari)
     "AXLBB3K3",
-    "IVXBP5K3",
+    "UVXFM4G3",
     # (5 hari)
     "IVXBP2K5",
     "AXLBB3K5",
     # (7 hari)
     "IVXBP2K7",
-    "AXLBB3K7",
     "UVXFM10G7",
+    "AXLMF5G7H",
     # inject voucher indosat
     # (1 hari)
     "AVISWJFIXS2",
+    # (2 hari)
+    "AVISWJFISS5",
     # (3 hari)
     "AVISWJFISM5",
     # (5 hari)
-    "IVFCWJ2G1",
-    "ACFRE1",
-    "ACFRE25",
-    "ACFRE35",
-    "IV1U",
+    "AVISWJFIMI3",
+    "AVISWJFIMI4",
     # inject voucher byu
-    "UVBYU11",
-    "UVBYU21",
-    "UVBYU33",
-    "UVBYU47",
+    # (1 hari)
+    "UVBYU1A",
     # (3 hari)
-    "UVBYU7",
-    "UVBYU9",
-    "UVBYU14",
-    "UVBYU20",
+    "UVBYU33",
     "AVBY6G3H",
     # (7 hari)
     "AVBYU6G7H",
     "AVBY8G7H",
+    "UVBYU57",
     # Inject Tri
     # (1 hari)
     "ZHW1GB1",
